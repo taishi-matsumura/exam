@@ -1,0 +1,9 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
+
+#+TITLE: プログラム専攻 練習問題・筆記試験
+
+* [[file:1st_C_practice/index.html][C言語 練習問題]]
+* [[file:1st_C_paper/index.html][C言語筆記試験]]
+* [[file:1st_DirectX/index.html][前期 DirectX課題]]

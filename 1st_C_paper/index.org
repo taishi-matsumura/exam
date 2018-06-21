@@ -1,0 +1,146 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: 1年生 前期 C言語 試験
+
+** 問１
+   グローバル変数とローカル変数の違いについて述べよ
+
+** 問２
+   プリプロセッサの#includeと#defineについて説明せよ
+
+** 問３
+   int、char、long、short、float、double型についてそれぞれ説明せよ
+
+** 問４
+   以下のプログラムを作成せよ
+   1. 1～100までの整数のうち3の倍数が入った配列を作成する
+   2. 1～100までの整数のうち4の倍数が入った配列を作成する
+   3. 1.と2.両方に入っている値のみで配列を作成する
+
+** 問５
+   以下のプログラムの、main関数終了時点でのa、b、c、*c、d、*dの値を答えよ
+#+BEGIN_SRC cpp -n
+int main(void) {
+	int a = 0;
+	int b = a;
+	int* c = &a;
+	int* d;
+	a = 5;
+
+	return 0;
+}
+#+END_SRC
+
+** 問６
+   下記のプログラムについて以下の問いに答えよ
+（１）コンパイルエラーを修正せよ
+（２）main関数の最終行時点でのapple、pen、pineapple、applePen、pineapplePenの値を答えよ
+（３）プログラム実行後にコンソールに表示される文字列を記述せよ
+#+BEGIN_SRC cpp -n
+int apple;
+int pen;
+int pineapple;
+
+int main() {
+	apple = 0x01 << 4;
+	pen = 0x20 >> 2;
+	pineapple = 0x40 >> 4;
+	
+	int applePen = apple | pen;
+	int pineapplePen = pineapple | pen;
+
+	printf("HasApple(applePen) = %d\n", HasApple(applePen));
+	printf("HasAppleOrPineapple(pineapplePen) = %d\n", HasAppleOrPineApple(pineapplePen));
+	printf("HasAppleOrPineapple(0x06) = %d\n", HasAppleOrPineapple(0x06));
+}
+
+int HasApple(int value) {
+	if (value & apple) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
+int HasAppleOrPineapple(int value) {
+	if (value & (apple | pineapple)) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+#+END_SRC
+
+** 問７
+   以下のプログラムに下記の変更を加えよ。
+（１）学年により生徒数が決まるので、学年で判断して生徒数を設定する関数を作成する。
+（２）各科目情報(講師名、学年、生徒数)をコンソールに出力する関数を作成する。
+（３）（２）で作成した関数を変更し、担当講師が松村の場合のみ科目情報をコンソールに出力するようにする。
+
+#+BEGIN_SRC cpp -n
+enum TeacherType {
+	TEACHER_MR_MATSUMURA,
+	TEACHER_MR_NAKACHI,
+	TEACHER_MR_NAGASAWA
+};
+
+/** 講師情報 */
+struct Teacher {
+	enum TeacherType teacherType;
+	const char* name;
+};
+
+/** 科目 */
+typedef struct {
+	/** 担当講師 */
+	struct Teacher teacher;
+	/** 学年 */
+	unsigned int grade;
+	/** 生徒数 */
+	unsigned int studentCount;
+} Subject;
+
+int main() {
+	struct Teacher mrMatsumura;
+	mrMatsumura.teacherType = TEACHER_MR_MATSUMURA;
+	mrMatsumura.name = "松村";
+
+	struct Teacher mrNakachi;
+	mrNakachi.teacherType = TEACHER_MR_NAKACHI;
+	mrNakachi.name = "中地";
+
+	struct Teacher mrNagasawa;
+	mrNagasawa.teacherType = TEACHER_MR_NAGASAWA;
+	mrNagasawa.name = "長澤";
+	
+	// プログラム基礎1
+	Subject programBase1;
+	programBase1.teacher = mrMatsumura;
+	programBase1.grade = 1;
+	programBase1.studentCount = 16;
+
+	// 担任ゼミ1
+	Subject seminar1;
+	seminar1.teacher = mrNagasawa;
+	seminar1.grade = 1;
+	seminar1.studentCount = 16;
+
+	// プログラム理論2
+	Subject programTheory2;
+	programTheory2.teacher = mrMatsumura;
+	programTheory2.grade = 2;
+	programTheory2.studentCount = 14;
+
+	// ゲームプログラミング2
+	Subject gameProgramming2;
+	gameProgramming2.teacher = mrNakachi;
+	gameProgramming2.grade = 2;
+	gameProgramming2.studentCount = 14;
+}
+
+void SetStudentCount(Subject* pSubject) {
+	// ここを作ってもらう
+}
+#+END_SRC

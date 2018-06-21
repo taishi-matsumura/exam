@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kiso_2nd_3", "kiso_2nd_3\kiso_2nd_3.vcxproj", "{9E064E53-3F45-46B2-9037-262C3B0FF5D1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vector", "vector\vector.vcxproj", "{A527FACE-84B4-45E6-88A5-376520487F6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E064E53-3F45-46B2-9037-262C3B0FF5D1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9E064E53-3F45-46B2-9037-262C3B0FF5D1}.Debug|Win32.Build.0 = Debug|Win32
+		{9E064E53-3F45-46B2-9037-262C3B0FF5D1}.Release|Win32.ActiveCfg = Release|Win32
+		{9E064E53-3F45-46B2-9037-262C3B0FF5D1}.Release|Win32.Build.0 = Release|Win32
+		{A527FACE-84B4-45E6-88A5-376520487F6E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A527FACE-84B4-45E6-88A5-376520487F6E}.Debug|Win32.Build.0 = Debug|Win32
+		{A527FACE-84B4-45E6-88A5-376520487F6E}.Release|Win32.ActiveCfg = Release|Win32
+		{A527FACE-84B4-45E6-88A5-376520487F6E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

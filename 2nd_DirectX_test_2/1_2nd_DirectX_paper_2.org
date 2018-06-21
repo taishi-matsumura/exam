@@ -1,0 +1,31 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: 1年生 後期 DirectX試験(第2回)
+
+** 問１
+*** その１
+    逆行列とはどのようなものか、「単位行列」という言葉を用いて説明せよ
+
+*** その２
+    逆行列を作成するDirectXのヘルパー関数の名前を書け
+    #+HTML:D3DXMatrix<span class="bb"> </span>
+    
+*** その３
+    ビルボードとはどのようなものか、使用する利点と使用例を併せて説明せよ
+
+*** その４
+    ビルボーディングを実現する手順を書け
+
+
+** 問２
+*** その１
+    3次元ベクトルに4×4の行列を掛け、計算結果を3次元ベクトルとして返すDirectXのヘルパー関数の名前を書け
+    #+HTML:D3DXVec3<span class="bb"> </span>
+    
+*** その２ 
+    任意の点Cを中心にジオメトリを円運動させる手順を書け
+
+*** その３
+    ジオメトリをステップ移動させる手順を書け

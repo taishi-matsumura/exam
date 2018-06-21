@@ -1,0 +1,159 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: 1年生 プログラム基礎試験(第３回)
+
+** 問１
+以下のソースコード内の①～⑭を埋めよ。
+
+#+BEGIN_SRC cpp -n
+  #include <iostream>
+
+  // using宣言を用い、「std::」と書かなくて済むようにする
+  // ※usingディレクティブは使用しないこと
+  ①
+
+  // ポインタ型の引数を２つ受ける
+  ② void Swap_Ptr(③)
+  {
+      ④
+  }
+
+  // 参照型の引数を２つ受ける
+  ② void Swap_Ref(⑤)
+  {
+      ⑥
+  }
+
+  // 受け取った２つの引数の値を、std::coutを用いて表示する
+  ② void Display(⑦, const char* pName1, const char* pName2)
+  {
+      // 「引数1の名前=引数1の値、引数2の名前=引数2の値<改行>」という形式で表示する処理を一行で書く
+      ⑧
+  }
+
+  int main()
+  {
+      int a = 5;
+      int b = 10;
+
+      // a、bの値を表示する
+      ⑨
+
+      // Swap_Ptr()を用いてaとbの値を入れ替える
+      Swap_Ptr(⑩);
+
+      // a、bの値を表示する
+      ⑨
+
+      // Swap_Ref()を用いてaとbの値を入れ替える
+      Swap_Ref(⑪);
+
+      // a、bの値を表示する
+      ⑨
+
+
+      float c = 1.23f;
+      float d = 4.56f;
+
+      // c、dの値を表示する
+      ⑫
+
+      // Swap_Ptr()を用いてcとdの値を入れ替える
+      Swap_Ptr(⑬);
+
+      // c、dの値を表示する
+      ⑫
+
+      // Swap_Ref()を用いてcとdの値を入れ替える
+      Swap_Ref(⑭);
+
+      // c、dの値を表示する
+      ⑫
+
+      return 0;
+  }
+#+END_SRC
+
+
+** 問２
+ポインタと参照の使い分けについて、意見を述べよ。
+
+
+** 問３
+下記のクラスについて、問いに答えよ。
+#+BEGIN_SRC cpp -n
+  class Character
+  {
+  public:
+      virtual void Attack() = 0;
+  };
+
+  class Enemy : public Character
+  {
+  };
+
+  class Queen : public Enemy
+  {
+  public:
+      virtual void Attack() {
+          // 攻撃の処理
+      }
+  };
+#+END_SRC
+
+
+*** １．
+以下のコードがエラーになる理由を述べよ。
+#+BEGIN_SRC cpp -n
+  int main()
+  {
+      Character character;
+
+      return 0;
+  }
+#+END_SRC
+
+*** ２．
+以下のコードがエラーになる理由を述べよ。
+#+BEGIN_SRC cpp -n
+  int main()
+  {
+      Enemy enemy;
+
+      return 0;
+  }
+#+END_SRC
+
+
+** 問４
+以下のソースコードの①～⑤を埋めよ
+#+BEGIN_SRC cpp -n
+  #include <vector>
+
+  class Sample
+  {
+  public:
+      Sample();
+      virtual ~Sample();
+  private:
+      ① m_pIntArray;
+      ② m_intVector;
+  };
+
+  Sample::Sample()
+  {
+      // 要素数10のint型の配列をnewし、先頭アドレスをm_pIntArrayに代入
+      ③
+
+      // for文を用い、0～18の偶数をm_intVectorに詰める
+      ④
+  }
+
+  Sample::~Sample()
+  {
+      // 必要な処理があればここに記述
+      ⑤
+  }
+#+END_SRC

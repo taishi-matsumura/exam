@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>1年生 前期 C言語 試験</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../style1.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">1年生 前期 C言語 試験</h1>
+
+<div id="outline-container-org821c28f" class="outline-2">
+<h2 id="org821c28f">問１</h2>
+<div class="outline-text-2" id="text-org821c28f">
+<p>
+グローバル変数とローカル変数の違いについて述べよ<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7d52d0" class="outline-2">
+<h2 id="orgc7d52d0">問２</h2>
+<div class="outline-text-2" id="text-orgc7d52d0">
+<p>
+プリプロセッサの#includeと#defineについて説明せよ<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3190335" class="outline-2">
+<h2 id="org3190335">問３</h2>
+<div class="outline-text-2" id="text-org3190335">
+<p>
+int、char、long、short、float、double型についてそれぞれ説明せよ<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8468ed0" class="outline-2">
+<h2 id="org8468ed0">問４</h2>
+<div class="outline-text-2" id="text-org8468ed0">
+<p>
+以下のプログラムを作成せよ<br />
+</p>
+<ol class="org-ol">
+<li>1～100までの整数のうち3の倍数が入った配列を作成する<br /></li>
+<li>1～100までの整数のうち4の倍数が入った配列を作成する<br /></li>
+<li>1.と2.両方に入っている値のみで配列を作成する<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd204c88" class="outline-2">
+<h2 id="orgd204c88">問５</h2>
+<div class="outline-text-2" id="text-orgd204c88">
+<p>
+以下のプログラムの、main関数終了時点でのa、b、c、*c、d、*dの値を答えよ<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-cpp"><span class="linenr">1: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">(</span><span style="color: #82A6DF;">void</span><span style="color: #9e3655305530;">)</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr">2: </span>  <span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">a</span> = <span style="color: #FF951B;">0</span>;
+<span class="linenr">3: </span>  <span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">b</span> = a;
+<span class="linenr">4: </span>  <span style="color: #82A6DF;">int</span>* <span style="color: #FA583F;">c</span> = &amp;a;
+<span class="linenr">5: </span>  <span style="color: #82A6DF;">int</span>* <span style="color: #FA583F;">d</span>;
+<span class="linenr">6: </span>  a = <span style="color: #FF951B;">5</span>;
+<span class="linenr">7: </span>
+<span class="linenr">8: </span>  <span style="color: #FFE329;">return</span> <span style="color: #FF951B;">0</span>;
+<span class="linenr">9: </span><span style="color: #9e3655305530;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5a9cc86" class="outline-2">
+<h2 id="org5a9cc86">問６</h2>
+<div class="outline-text-2" id="text-org5a9cc86">
+<p>
+   下記のプログラムについて以下の問いに答えよ<br />
+（１）コンパイルエラーを修正せよ<br />
+（２）main関数の最終行時点でのapple、pen、pineapple、applePen、pineapplePenの値を答えよ<br />
+（３）プログラム実行後にコンソールに表示される文字列を記述せよ<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-cpp"><span class="linenr"> 1: </span><span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">apple</span>;
+<span class="linenr"> 2: </span><span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">pen</span>;
+<span class="linenr"> 3: </span><span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">pineapple</span>;
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">()</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr"> 6: </span>  apple = <span style="color: #FF951B;">0x01</span> &lt;&lt; <span style="color: #FF951B;">4</span>;
+<span class="linenr"> 7: </span>  pen = <span style="color: #FF951B;">0x20</span> &gt;&gt; <span style="color: #FF951B;">2</span>;
+<span class="linenr"> 8: </span>  pineapple = <span style="color: #FF951B;">0x40</span> &gt;&gt; <span style="color: #FF951B;">4</span>;
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>  <span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">applePen</span> = apple | pen;
+<span class="linenr">11: </span>  <span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">pineapplePen</span> = pineapple | pen;
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>  printf<span style="color: #7abaa445df9e;">(</span><span style="color: #61CE3C;">"HasApple(applePen) = %d\n"</span>, HasApple<span style="color: #c6a1cb4a8a09;">(</span>applePen<span style="color: #c6a1cb4a8a09;">)</span><span style="color: #7abaa445df9e;">)</span>;
+<span class="linenr">14: </span>  printf<span style="color: #7abaa445df9e;">(</span><span style="color: #61CE3C;">"HasAppleOrPineapple(pineapplePen) = %d\n"</span>, HasAppleOrPineApple<span style="color: #c6a1cb4a8a09;">(</span>pineapplePen<span style="color: #c6a1cb4a8a09;">)</span><span style="color: #7abaa445df9e;">)</span>;
+<span class="linenr">15: </span>  printf<span style="color: #7abaa445df9e;">(</span><span style="color: #61CE3C;">"HasAppleOrPineapple(0x06) = %d\n"</span>, HasAppleOrPineapple<span style="color: #c6a1cb4a8a09;">(</span><span style="color: #FF951B;">0x06</span><span style="color: #c6a1cb4a8a09;">)</span><span style="color: #7abaa445df9e;">)</span>;
+<span class="linenr">16: </span><span style="color: #9e3655305530;">}</span>
+<span class="linenr">17: </span>
+<span class="linenr">18: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">HasApple</span><span style="color: #9e3655305530;">(</span><span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">value</span><span style="color: #9e3655305530;">)</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr">19: </span>  <span style="color: #FFE329;">if</span> <span style="color: #7abaa445df9e;">(</span>value &amp; apple<span style="color: #7abaa445df9e;">)</span> <span style="color: #7abaa445df9e;">{</span>
+<span class="linenr">20: </span>    <span style="color: #FFE329;">return</span> <span style="color: #FF951B;">1</span>;
+<span class="linenr">21: </span>  <span style="color: #7abaa445df9e;">}</span> <span style="color: #FFE329;">else</span> <span style="color: #7abaa445df9e;">{</span>
+<span class="linenr">22: </span>    <span style="color: #FFE329;">return</span> <span style="color: #FF951B;">0</span>;
+<span class="linenr">23: </span>  <span style="color: #7abaa445df9e;">}</span>
+<span class="linenr">24: </span><span style="color: #9e3655305530;">}</span>
+<span class="linenr">25: </span>
+<span class="linenr">26: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">HasAppleOrPineapple</span><span style="color: #9e3655305530;">(</span><span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">value</span><span style="color: #9e3655305530;">)</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr">27: </span>  <span style="color: #FFE329;">if</span> <span style="color: #7abaa445df9e;">(</span>value &amp; <span style="color: #c6a1cb4a8a09;">(</span>apple | pineapple<span style="color: #c6a1cb4a8a09;">)</span><span style="color: #7abaa445df9e;">)</span> <span style="color: #7abaa445df9e;">{</span>
+<span class="linenr">28: </span>    <span style="color: #FFE329;">return</span> <span style="color: #FF951B;">1</span>;
+<span class="linenr">29: </span>  <span style="color: #7abaa445df9e;">}</span> <span style="color: #FFE329;">else</span> <span style="color: #7abaa445df9e;">{</span>
+<span class="linenr">30: </span>    <span style="color: #FFE329;">return</span> <span style="color: #FF951B;">0</span>;
+<span class="linenr">31: </span>  <span style="color: #7abaa445df9e;">}</span>
+<span class="linenr">32: </span><span style="color: #9e3655305530;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org62cd5a3" class="outline-2">
+<h2 id="org62cd5a3">問７</h2>
+<div class="outline-text-2" id="text-org62cd5a3">
+<p>
+   以下のプログラムに下記の変更を加えよ。<br />
+（１）学年により生徒数が決まるので、学年で判断して生徒数を設定する関数を作成する。<br />
+（２）各科目情報(講師名、学年、生徒数)をコンソールに出力する関数を作成する。<br />
+（３）（２）で作成した関数を変更し、担当講師が松村の場合のみ科目情報をコンソールに出力するようにする。<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-cpp"><span class="linenr"> 1: </span><span style="color: #FFE329;">enum</span> <span style="color: #82A6DF;">TeacherType</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr"> 2: </span>  <span style="color: #FA583F;">TEACHER_MR_MATSUMURA</span>,
+<span class="linenr"> 3: </span>  <span style="color: #FA583F;">TEACHER_MR_NAKACHI</span>,
+<span class="linenr"> 4: </span>  <span style="color: #FA583F;">TEACHER_MR_NAGASAWA</span>
+<span class="linenr"> 5: </span><span style="color: #9e3655305530;">}</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span><span style="color: #2AA198; font-style: italic;">/** </span><span style="color: #2AA198; font-style: italic;">&#35611;&#24107;&#24773;&#22577; */</span>
+<span class="linenr"> 8: </span><span style="color: #FFE329;">struct</span> <span style="color: #82A6DF;">Teacher</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr"> 9: </span>  <span style="color: #FFE329;">enum</span> <span style="color: #82A6DF;">TeacherType</span> <span style="color: #FA583F;">teacherType</span>;
+<span class="linenr">10: </span>  <span style="color: #FFE329;">const</span> <span style="color: #82A6DF;">char</span>* <span style="color: #FA583F;">name</span>;
+<span class="linenr">11: </span><span style="color: #9e3655305530;">}</span>;
+<span class="linenr">12: </span>
+<span class="linenr">13: </span><span style="color: #2AA198; font-style: italic;">/** </span><span style="color: #2AA198; font-style: italic;">&#31185;&#30446; */</span>
+<span class="linenr">14: </span><span style="color: #FFE329;">typedef</span> <span style="color: #FFE329;">struct</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr">15: </span>  <span style="color: #2AA198; font-style: italic;">/** </span><span style="color: #2AA198; font-style: italic;">&#25285;&#24403;&#35611;&#24107; */</span>
+<span class="linenr">16: </span>  <span style="color: #FFE329;">struct</span> <span style="color: #82A6DF;">Teacher</span> <span style="color: #FA583F;">teacher</span>;
+<span class="linenr">17: </span>  <span style="color: #2AA198; font-style: italic;">/** </span><span style="color: #2AA198; font-style: italic;">&#23398;&#24180; */</span>
+<span class="linenr">18: </span>  <span style="color: #82A6DF;">unsigned</span> <span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">grade</span>;
+<span class="linenr">19: </span>  <span style="color: #2AA198; font-style: italic;">/** </span><span style="color: #2AA198; font-style: italic;">&#29983;&#24466;&#25968; */</span>
+<span class="linenr">20: </span>  <span style="color: #82A6DF;">unsigned</span> <span style="color: #82A6DF;">int</span> <span style="color: #FA583F;">studentCount</span>;
+<span class="linenr">21: </span><span style="color: #9e3655305530;">}</span> <span style="color: #82A6DF;">Subject</span>;
+<span class="linenr">22: </span>
+<span class="linenr">23: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">()</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr">24: </span>  <span style="color: #FFE329;">struct</span> <span style="color: #82A6DF;">Teacher</span> <span style="color: #FA583F;">mrMatsumura</span>;
+<span class="linenr">25: </span>  mrMatsumura.teacherType = TEACHER_MR_MATSUMURA;
+<span class="linenr">26: </span>  mrMatsumura.name = <span style="color: #61CE3C;">"&#26494;&#26449;"</span>;
+<span class="linenr">27: </span>
+<span class="linenr">28: </span>  <span style="color: #FFE329;">struct</span> <span style="color: #82A6DF;">Teacher</span> <span style="color: #FA583F;">mrNakachi</span>;
+<span class="linenr">29: </span>  mrNakachi.teacherType = TEACHER_MR_NAKACHI;
+<span class="linenr">30: </span>  mrNakachi.name = <span style="color: #61CE3C;">"&#20013;&#22320;"</span>;
+<span class="linenr">31: </span>
+<span class="linenr">32: </span>  <span style="color: #FFE329;">struct</span> <span style="color: #82A6DF;">Teacher</span> <span style="color: #FA583F;">mrNagasawa</span>;
+<span class="linenr">33: </span>  mrNagasawa.teacherType = TEACHER_MR_NAGASAWA;
+<span class="linenr">34: </span>  mrNagasawa.name = <span style="color: #61CE3C;">"&#38263;&#28580;"</span>;
+<span class="linenr">35: </span>
+<span class="linenr">36: </span>  <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#12503;&#12525;&#12464;&#12521;&#12512;&#22522;&#30990;1</span>
+<span class="linenr">37: </span>  <span style="color: #82A6DF;">Subject</span> <span style="color: #FA583F;">programBase1</span>;
+<span class="linenr">38: </span>  programBase1.teacher = mrMatsumura;
+<span class="linenr">39: </span>  programBase1.grade = <span style="color: #FF951B;">1</span>;
+<span class="linenr">40: </span>  programBase1.studentCount = <span style="color: #FF951B;">16</span>;
+<span class="linenr">41: </span>
+<span class="linenr">42: </span>  <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#25285;&#20219;&#12476;&#12511;1</span>
+<span class="linenr">43: </span>  <span style="color: #82A6DF;">Subject</span> <span style="color: #FA583F;">seminar1</span>;
+<span class="linenr">44: </span>  seminar1.teacher = mrNagasawa;
+<span class="linenr">45: </span>  seminar1.grade = <span style="color: #FF951B;">1</span>;
+<span class="linenr">46: </span>  seminar1.studentCount = <span style="color: #FF951B;">16</span>;
+<span class="linenr">47: </span>
+<span class="linenr">48: </span>  <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#12503;&#12525;&#12464;&#12521;&#12512;&#29702;&#35542;2</span>
+<span class="linenr">49: </span>  <span style="color: #82A6DF;">Subject</span> <span style="color: #FA583F;">programTheory2</span>;
+<span class="linenr">50: </span>  programTheory2.teacher = mrMatsumura;
+<span class="linenr">51: </span>  programTheory2.grade = <span style="color: #FF951B;">2</span>;
+<span class="linenr">52: </span>  programTheory2.studentCount = <span style="color: #FF951B;">14</span>;
+<span class="linenr">53: </span>
+<span class="linenr">54: </span>  <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#12466;&#12540;&#12512;&#12503;&#12525;&#12464;&#12521;&#12511;&#12531;&#12464;2</span>
+<span class="linenr">55: </span>  <span style="color: #82A6DF;">Subject</span> <span style="color: #FA583F;">gameProgramming2</span>;
+<span class="linenr">56: </span>  gameProgramming2.teacher = mrNakachi;
+<span class="linenr">57: </span>  gameProgramming2.grade = <span style="color: #FF951B;">2</span>;
+<span class="linenr">58: </span>  gameProgramming2.studentCount = <span style="color: #FF951B;">14</span>;
+<span class="linenr">59: </span><span style="color: #9e3655305530;">}</span>
+<span class="linenr">60: </span>
+<span class="linenr">61: </span><span style="color: #82A6DF;">void</span> <span style="color: #FF88FF;">SetStudentCount</span><span style="color: #9e3655305530;">(</span><span style="color: #82A6DF;">Subject</span>* <span style="color: #FA583F;">pSubject</span><span style="color: #9e3655305530;">)</span> <span style="color: #9e3655305530;">{</span>
+<span class="linenr">62: </span>  <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#12371;&#12371;&#12434;&#20316;&#12387;&#12390;&#12418;&#12425;&#12358;</span>
+<span class="linenr">63: </span><span style="color: #9e3655305530;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
