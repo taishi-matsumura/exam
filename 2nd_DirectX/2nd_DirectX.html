@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1年生 プログラム基礎試験(第１回)</title>
+<title>1年生 後期 DirectX課題</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -228,99 +228,30 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">1年生 プログラム基礎試験(第１回)</h1>
+<h1 class="title">1年生 後期 DirectX課題</h1>
 
-<div id="outline-container-org205589b" class="outline-2">
-<h2 id="org205589b">問１</h2>
-<div class="outline-text-2" id="text-org205589b">
-<p>
-以下のメンバを持つPlayerクラスを作成せよ。<br />
-・レベル、ヒットポイント、攻撃力、防御力(いずれもint型)<br />
-・上記メンバを初期化する関数<br />
-・上記メンバの値を表示する関数<br />
-・デフォルトコンストラクタ、デストラクタ(いずれも空関数で良い)<br />
-</p>
-
-<p>
-メンバ変数はカプセル化し、Playerクラスのメンバ関数以外からは<br />
-読み書きできないようにすること。<br />
-</p>
-</div>
+<div id="outline-container-org702d8ad" class="outline-2">
+<h2 id="org702d8ad">DirectXを用い、以下の仕様を満たす3Dプログラムを作成せよ</h2>
+<div class="outline-text-2" id="text-org702d8ad">
+<ul class="org-ul">
+<li>画面上に複数の3D物体を表示すること<br /></li>
+<li>キーボード操作で、特定の3D物体を移動させられること<br /></li>
+<li>キーボード操作で、カメラを上下左右に移動させられること<br /></li>
+<li>キーボード操作で、注視点を固定したままカメラを上下左右に移動させられること<br /></li>
+<li>キーボード操作で、ズームイン・ズームアウトができること<br /></li>
+<li>画面上の3D物体同士が接触・衝突した際、DXFontを用いてその旨を画面上に表示すること<br /></li>
+</ul>
 </div>
 
-
-<div id="outline-container-orgfabb314" class="outline-2">
-<h2 id="orgfabb314">問２</h2>
-<div class="outline-text-2" id="text-orgfabb314">
-<p>
-レベルを指定しなければデフォルト値「１」がメンバ変数に設定され、<br />
-値を指定した場合はその値がメンバ変数に設定されるよう、<br />
-初期化関数の仕様をデフォルト引数を用いて変更せよ。<br />
-</p>
+<div id="outline-container-org5568a0a" class="outline-3">
+<h3 id="org5568a0a">8補足</h3>
+<div class="outline-text-3" id="text-org5568a0a">
+<ul class="org-ul">
+<li>キーボードからの入力はWindowメッセージではなくDirectInputを用いて取り扱うこと<br /></li>
+<li>カメラや物体の操作にはマウスを用いてもよい<br /></li>
+<li>衝突判定はスフィア・ボックス・レイのいずれを用いてもよい<br /></li>
+</ul>
 </div>
-</div>
-
-
-<div id="outline-container-orgd92bfb6" class="outline-2">
-<h2 id="orgd92bfb6">問３</h2>
-<div class="outline-text-2" id="text-orgd92bfb6">
-<p>
-問２で作成した初期化関数をオーバーロードし、<br />
-４つのメンバを固定値で初期化する関数を作成せよ。<br />
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org5ec5c46" class="outline-2">
-<h2 id="org5ec5c46">問４</h2>
-<div class="outline-text-2" id="text-org5ec5c46">
-<p>
-問２・問３で作成した初期化関数を削除し、同等の機能を<br />
-コンストラクタだけを用いて実現せよ。<br />
-その際、コンストラクタ内でメンバ変数に値を代入するのではなく、<br />
-メンバイニシャライザを用いること。<br />
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgeebc71f" class="outline-2">
-<h2 id="orgeebc71f">問５</h2>
-<div class="outline-text-2" id="text-orgeebc71f">
-<p>
-Playerクラスと同じメンバを持つEnemyクラスを作成し、<br />
-PlayerクラスとEnemyクラスにそれぞれ固有のメンバを追加するものとする。<br />
-ここで、PlayerクラスとEnemyクラスを汎化したCharacterクラスを作成せよ。<br />
-また、それに伴いPlayerクラスとEnemyクラスを修正せよ。<br />
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org10ac631" class="outline-2">
-<h2 id="org10ac631">問６</h2>
-<div class="outline-text-2" id="text-org10ac631">
-<p>
-PlayerクラスとEnemyクラスのインスタンスを生成する際、メンバの初期値の<br />
-設定方法について以下の２つの案が考えられる。<br />
-１.インスタンスを生成する主体が初期値を指定する<br />
-２.PlayerクラスとEnemyクラスが初期値を指定する<br />
-</p>
-
-<p>
-それぞれに対応したコンストラクタを作成せよ。<br />
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org6c119b7" class="outline-2">
-<h2 id="org6c119b7">問７</h2>
-<div class="outline-text-2" id="text-org6c119b7">
-<p>
-問６のそれぞれの案の長所・短所を述べよ。<br />
-</p>
 </div>
 </div>
 </div>

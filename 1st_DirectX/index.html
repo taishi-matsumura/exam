@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
-<!-- 2018-06-22 金 10:11 -->
+<!-- 2018-06-22 金 22:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>1年生 前期 DirectX課題</title>
@@ -231,18 +231,18 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">1年生 前期 DirectX課題</h1>
 
-<div id="outline-container-org1dbf13a" class="outline-2">
-<h2 id="org1dbf13a">以下の各STEPについて、それぞれ別の実行ファイルとしてプログラムを作成せよ</h2>
-<div class="outline-text-2" id="text-org1dbf13a">
+<div id="outline-container-org0dd004c" class="outline-2">
+<h2 id="org0dd004c">以下の各STEPについて、それぞれ別の実行ファイルとしてプログラムを作成せよ</h2>
+<div class="outline-text-2" id="text-org0dd004c">
 <ul class="org-ul">
 <li><b>ソリューション名は「Exercise」とし、その配下に各STEPのプロジェクトを作成すること</b><br /></li>
 <li><b>各STEPで必要となるDirectXの関数やWin32APIを列挙しているので、不明な点はMSDN等で調べること</b><br /></li>
 <li><b>Windowsのプログラミングに慣れることが目的なので、前のSTEPの内容を丸々コピペするのは極力避けること</b><br /></li>
 </ul>
 </div>
-<div id="outline-container-orgc516707" class="outline-3">
-<h3 id="orgc516707">STEP1 空のWindowの生成</h3>
-<div class="outline-text-3" id="text-orgc516707">
+<div id="outline-container-org4ddb7d6" class="outline-3">
+<h3 id="org4ddb7d6">STEP1 空のWindowの生成</h3>
+<div class="outline-text-3" id="text-org4ddb7d6">
 <ol class="org-ol">
 <li>空のプロジェクトを作成し、WinMainを作成する。この時点では空関数でよい。<br /></li>
 <li>WM_QUITメッセージが来るまでループするwhile文(for/do whileでも可)を作成する。(以後、これをメインループと呼ぶ)<br /></li>
@@ -251,9 +251,9 @@ for the JavaScript code in this tag.
 <li>任意のウィンドウタイトルを設定し、期待通りに反映されていることを目視確認すること。<br /></li>
 </ol>
 </div>
-<div id="outline-container-org9da271b" class="outline-4">
-<h4 id="org9da271b">使用する関数：</h4>
-<div class="outline-text-4" id="text-org9da271b">
+<div id="outline-container-orgeccbcfc" class="outline-4">
+<h4 id="orgeccbcfc">使用する関数：</h4>
+<div class="outline-text-4" id="text-orgeccbcfc">
 <ul class="org-ul">
 <li>RegisterClass()<br /></li>
 <li>CreateWindow()<br /></li>
@@ -268,9 +268,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgc3ca7b1" class="outline-3">
-<h3 id="orgc3ca7b1">STEP2 ポリゴンを一枚描画</h3>
-<div class="outline-text-3" id="text-orgc3ca7b1">
+<div id="outline-container-org23f721b" class="outline-3">
+<h3 id="org23f721b">STEP2 ポリゴンを一枚描画</h3>
+<div class="outline-text-3" id="text-org23f721b">
 <ol class="org-ol">
 <li>DirectXオブジェクトを生成/初期化する。<br /></li>
 <li>DirectXデバイスを生成する。<br /></li>
@@ -280,9 +280,9 @@ for the JavaScript code in this tag.
 <li>プログラム終了時にDirectXの各オブジェクトを解放する。<br /></li>
 </ol>
 </div>
-<div id="outline-container-org370368a" class="outline-4">
-<h4 id="org370368a">使用する関数：</h4>
-<div class="outline-text-4" id="text-org370368a">
+<div id="outline-container-orge66fc2f" class="outline-4">
+<h4 id="orge66fc2f">使用する関数：</h4>
+<div class="outline-text-4" id="text-orge66fc2f">
 <ul class="org-ul">
 <li>GetAdapterDisplayMode()<br /></li>
 <li>Direct3DCreate9()<br /></li>
@@ -301,18 +301,18 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org8051d5d" class="outline-3">
-<h3 id="org8051d5d">STEP3 矩形の描画</h3>
-<div class="outline-text-3" id="text-org8051d5d">
+<div id="outline-container-org04f38ec" class="outline-3">
+<h3 id="org04f38ec">STEP3 矩形の描画</h3>
+<div class="outline-text-3" id="text-org04f38ec">
 <ol class="org-ol">
 <li>頂点を4つにし、ポリゴンを2枚用いて矩形を描画する。<br /></li>
 <li>任意の透過pngファイルをロードし、テクスチャを生成する。<br /></li>
 <li>生成したテクスチャを、前述の矩形領域に貼り付けて描画する。<br /></li>
 </ol>
 </div>
-<div id="outline-container-orgf54fef0" class="outline-4">
-<h4 id="orgf54fef0">使用する関数：</h4>
-<div class="outline-text-4" id="text-orgf54fef0">
+<div id="outline-container-org5e811f5" class="outline-4">
+<h4 id="org5e811f5">使用する関数：</h4>
+<div class="outline-text-4" id="text-org5e811f5">
 <ul class="org-ul">
 <li>IDirect3DDevice9::SetRenderState()<br /></li>
 <li>IDirect3DDevice9::SetTextureStageState()<br /></li>
@@ -323,9 +323,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org2e2463e" class="outline-3">
-<h3 id="org2e2463e">STEP4 キーボードの状態の取得</h3>
-<div class="outline-text-3" id="text-org2e2463e">
+<div id="outline-container-orgedbb17f" class="outline-3">
+<h3 id="orgedbb17f">STEP4 キーボードの状態の取得</h3>
+<div class="outline-text-3" id="text-orgedbb17f">
 <ol class="org-ol">
 <li>DirectInputオブジェクトを生成する。<br /></li>
 <li>DirectInputキーボードデバイスを生成する。<br /></li>
@@ -337,9 +337,9 @@ for the JavaScript code in this tag.
 <li>プログラム終了時にキーボードへのアクセス権の解放と各オブジェクトを解放する。<br /></li>
 </ol>
 </div>
-<div id="outline-container-org569657b" class="outline-4">
-<h4 id="org569657b">使用する関数：</h4>
-<div class="outline-text-4" id="text-org569657b">
+<div id="outline-container-orgbcce0b7" class="outline-4">
+<h4 id="orgbcce0b7">使用する関数：</h4>
+<div class="outline-text-4" id="text-orgbcce0b7">
 <ul class="org-ul">
 <li>DirectInput8Create()<br /></li>
 <li>IDirectInput8::CreateDevice()<br /></li>

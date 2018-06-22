@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1年生 後期 DirectX試験(第1回)</title>
+<title>1年生 プログラム理論試験(第２回)</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -228,188 +228,38 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">1年生 後期 DirectX試験(第1回)</h1>
-
-<div id="outline-container-org69dd8b5" class="outline-2">
-<h2 id="org69dd8b5">問１</h2>
-<div class="outline-text-2" id="text-org69dd8b5">
-</div>
-<div id="outline-container-org6f86ad0" class="outline-3">
-<h3 id="org6f86ad0">その１</h3>
-<div class="outline-text-3" id="text-org6f86ad0">
+<h1 class="title">1年生 プログラム理論試験(第２回)</h1>
 <p>
-4×4の単位行列を書け<br />
+添付のソースコードは、あるゲームのタイトルシーンで使用されるクラス群である。<br />
+これらを解析し以下の問いに答えよ。<br />
+</p>
+
+<div id="outline-container-org7a8269d" class="outline-2">
+<h2 id="org7a8269d">問１</h2>
+<div class="outline-text-2" id="text-org7a8269d">
+<p>
+これらのクラス群について、クラス図を作成せよ。<br />
+ただし、各クラスのprivateメンバについては記載しなくてよい。<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2f82b78" class="outline-3">
-<h3 id="org2f82b78">その２</h3>
-<div class="outline-text-3" id="text-org2f82b78">
+<div id="outline-container-org975e1d7" class="outline-2">
+<h2 id="org975e1d7">問２</h2>
+<div class="outline-text-2" id="text-org975e1d7">
 <p>
-3次元の情報(各ジオメトリの座標)を2次元の情報(スクリーン上の座標)に変換する過程で必要な変換処理3種類を書け<br />
+タイトルシーンでのシーケンス図を作成せよ。<br />
+ただし、SceneManagerより上位とLibraryより下位の部分については記載しなくてよい。<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org849d5ee" class="outline-3">
-<h3 id="org849d5ee">その３</h3>
-<div class="outline-text-3" id="text-org849d5ee">
+<div id="outline-container-org8eb91dd" class="outline-2">
+<h2 id="org8eb91dd">問３</h2>
+<div class="outline-text-2" id="text-org8eb91dd">
 <p>
-以下の機能はどの変換処理を用いて実現するか、それぞれについて答えよ<br />
+C++の言語的観点やオブジェクト指向の観点から、不備・改善点があれば指摘せよ。<br />
 </p>
-<ol class="org-ol">
-<li>ジオメトリの回転<br /></li>
-<li>ジオメトリの拡大・縮小<br /></li>
-<li>ジオメトリの平行移動<br /></li>
-<li>カメラの回転<br /></li>
-<li>カメラの移動<br /></li>
-<li>ズームイン・ズームアウト<br /></li>
-</ol>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-orgfabcfe5" class="outline-2">
-<h2 id="orgfabcfe5">問２</h2>
-<div class="outline-text-2" id="text-orgfabcfe5">
-</div>
-<div id="outline-container-orgedb9c90" class="outline-3">
-<h3 id="orgedb9c90">その１</h3>
-<div class="outline-text-3" id="text-orgedb9c90">
-<p>
-以下は全て「D3DXMatrix」で始まるヘルパー関数である。それぞれの関数名を答えよ(D3DXMatrixは書かなくて良い)<br />
-</p>
-<ol class="org-ol">
-<li>単位行列作成<br /></li>
-<li>行列の積<br /></li>
-<li>平行移動行列作成（オフセット）<br /></li>
-<li>X軸回転行列作成<br /></li>
-<li>ビュー変換行列作成<br /></li>
-<li>射影変換行列作成<br /></li>
-</ol>
-</div>
-</div>
-
-<div id="outline-container-orgfcae4fe" class="outline-3">
-<h3 id="orgfcae4fe">その２</h3>
-<div class="outline-text-3" id="text-orgfcae4fe">
-<p>
-その１の5.の関数を使用する際に必要なパラメータを3つ書け。<br />
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org448ff4e" class="outline-2">
-<h2 id="org448ff4e">問３</h2>
-<div class="outline-text-2" id="text-org448ff4e">
-<p>
-以下は2Dの回転行列の求め方について書かれている。空白部を埋めよ<br />
-</p>
-
-<div class="HTML">
-<p>
-&lt;pre&gt;<br />
-xy平面上の点(x, y)を原点(0, 0)を中心にθ回転した点(x', y')について考える。<br />
-</p>
-
-<p>
-原点と(x, y)を通る直線とx軸のなす角をα、(x, y)と原点(0, 0)との距離をrとすると、<br />
-</p>
-
-<p>
-x' = &lt;span class="bb"&gt; &lt;/span&gt;  …①<br />
-y' = &lt;span class="bb"&gt; &lt;/span&gt;  …②<br />
-</p>
-
-<p>
-また、加法定理より、<br />
-</p>
-
-<p>
-cos(α + θ) = cosα・cosθ - sinα・sinθ  …③<br />
-sin(α + θ) = sinα・cosθ + cosα・sinθ  …④<br />
-</p>
-
-<p>
-x'について整理すると<br />
-</p>
-
-<p>
-x' = &lt;span class="bb"&gt; &lt;/span&gt;  (∵①・③より)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;  (∵cosα = x/r、sinα = y/r)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;<br />
-</p>
-
-<p>
-同様にy'について整理すると<br />
-</p>
-
-<p>
-y' = &lt;span class="bb"&gt; &lt;/span&gt;  (∵②・④より)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;  (∵sinα = y/r、cosα = x/r)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;<br />
-</p>
-
-<p>
-xy平面上の座標(x, y)を原点(0, 0)からのベクトルと考え、それを行列で表現すると<br />
-(x  y)<br />
-となり、この行列に2×2行列を掛けあわせたものは以下のようになる。<br />
-</p>
-
-<p>
-(x  y)・(a  c) = &lt;span class="bb"&gt; &lt;/span&gt;   …⑤<br />
-        (b  d)<br />
-</p>
-
-<p>
-ここで、前述の「点(x, y)を原点を中心にθ回転させた点(x', y')」についても同様に行列で表現すると<br />
-</p>
-
-<p>
-(x'  y') = &lt;span class="bb"&gt; &lt;/span&gt;   …⑥<br />
-</p>
-
-<p>
-⑤・⑥の右辺に注目し、<br />
-a = cosθ<br />
-b = -sinθ<br />
-c = sinθ<br />
-d = cosθ<br />
-と置くと、<br />
-</p>
-
-<p>
-(x  y)・(a  c) = (x  y)・&lt;span class="bb"&gt; &lt;/span&gt;<br />
-        (b  d)<br />
-</p>
-
-<p>
-= &lt;span class="bb"&gt; &lt;/span&gt;<br />
-= (x'  y')<br />
-</p>
-
-<p>
-と変換できる。<br />
-</p>
-
-<p>
-∴点(x, y)を原点を中心にθ回転させた点(x', y')は<br />
-</p>
-
-<p>
-(x  y)・&lt;span class="bb"&gt; &lt;/span&gt;<br />
-</p>
-
-<p>
-にて求められる。<br />
-&lt;/pre&gt;<br />
-</p>
-
-</div>
 </div>
 </div>
 </div>

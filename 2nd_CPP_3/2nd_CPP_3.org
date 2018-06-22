@@ -7,7 +7,7 @@
 ** 問１
 以下のソースコード内の①～⑭を埋めよ。
 
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include <iostream>
 
   // using宣言を用い、「std::」と書かなくて済むようにする
@@ -83,7 +83,7 @@
 
 ** 問３
 下記のクラスについて、問いに答えよ。
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   class Character
   {
   public:
@@ -106,7 +106,7 @@
 
 *** １．
 以下のコードがエラーになる理由を述べよ。
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   int main()
   {
       Character character;
@@ -117,7 +117,7 @@
 
 *** ２．
 以下のコードがエラーになる理由を述べよ。
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   int main()
   {
       Enemy enemy;
@@ -129,7 +129,7 @@
 
 ** 問４
 以下のソースコードの①～⑤を埋めよ
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include <vector>
 
   class Sample

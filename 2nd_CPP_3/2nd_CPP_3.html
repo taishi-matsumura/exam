@@ -230,15 +230,15 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">1年生 プログラム基礎試験(第３回)</h1>
 
-<div id="outline-container-org40412b6" class="outline-2">
-<h2 id="org40412b6">問１</h2>
-<div class="outline-text-2" id="text-org40412b6">
+<div id="outline-container-orgb196c50" class="outline-2">
+<h2 id="orgb196c50">問１</h2>
+<div class="outline-text-2" id="text-orgb196c50">
 <p>
 以下のソースコード内の①～⑭を埋めよ。<br />
 </p>
 
 <div class="org-src-container">
-<pre class="src src-cpp"><span class="linenr"> 1: </span><span style="color: #7fffd4;">#include</span> <span style="color: #9e3655305530;">&lt;</span><span style="color: #61CE3C;">iostream</span><span style="color: #9e3655305530;">&gt;</span>
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #7fffd4;">#include</span> <span style="color: #9e3655305530;">&lt;</span><span style="color: #61CE3C;">iostream</span><span style="color: #9e3655305530;">&gt;</span>
 <span class="linenr"> 2: </span>
 <span class="linenr"> 3: </span><span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">using&#23459;&#35328;&#12434;&#29992;&#12356;&#12289;&#12300;std::&#12301;&#12392;&#26360;&#12363;&#12394;&#12367;&#12390;&#28168;&#12416;&#12424;&#12358;&#12395;&#12377;&#12427;</span>
 <span class="linenr"> 4: </span><span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#8251;using&#12487;&#12451;&#12524;&#12463;&#12486;&#12451;&#12502;&#12399;&#20351;&#29992;&#12375;&#12394;&#12356;&#12371;&#12392;</span>
@@ -310,9 +310,9 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org2251b6a" class="outline-2">
-<h2 id="org2251b6a">問２</h2>
-<div class="outline-text-2" id="text-org2251b6a">
+<div id="outline-container-orgedb31d7" class="outline-2">
+<h2 id="orgedb31d7">問２</h2>
+<div class="outline-text-2" id="text-orgedb31d7">
 <p>
 ポインタと参照の使い分けについて、意見を述べよ。<br />
 </p>
@@ -320,27 +320,27 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org59cbb63" class="outline-2">
-<h2 id="org59cbb63">問３</h2>
-<div class="outline-text-2" id="text-org59cbb63">
+<div id="outline-container-orgd9d5edb" class="outline-2">
+<h2 id="orgd9d5edb">問３</h2>
+<div class="outline-text-2" id="text-orgd9d5edb">
 <p>
 下記のクラスについて、問いに答えよ。<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-cpp"><span class="linenr"> 1: </span><span style="color: #FFE329;">class</span> <span style="color: #82A6DF;">Character</span>
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #82A6DF;">class</span> <span style="color: #FA583F;">Character</span>
 <span class="linenr"> 2: </span><span style="color: #9e3655305530;">{</span>
-<span class="linenr"> 3: </span><span style="color: #FFE329;">public</span>:
-<span class="linenr"> 4: </span>    <span style="color: #FFE329;">virtual</span> <span style="color: #82A6DF;">void</span> <span style="color: #FF88FF;">Attack</span><span style="color: #7abaa445df9e;">()</span> = <span style="color: #FF951B;">0</span>;
+<span class="linenr"> 3: </span><span style="color: #FF951B;">public</span>:
+<span class="linenr"> 4: </span>    virtual <span style="color: #82A6DF;">void</span> <span style="color: #FF88FF;">Attack</span><span style="color: #7abaa445df9e;">()</span> = <span style="color: #FF951B;">0</span>;
 <span class="linenr"> 5: </span><span style="color: #9e3655305530;">}</span>;
 <span class="linenr"> 6: </span>
-<span class="linenr"> 7: </span><span style="color: #FFE329;">class</span> <span style="color: #82A6DF;">Enemy</span> : <span style="color: #FFE329;">public</span> <span style="color: #82A6DF;">Character</span>
+<span class="linenr"> 7: </span><span style="color: #82A6DF;">class</span> <span style="color: #FA583F;">Enemy</span> : public Character
 <span class="linenr"> 8: </span><span style="color: #9e3655305530;">{</span>
 <span class="linenr"> 9: </span><span style="color: #9e3655305530;">}</span>;
 <span class="linenr">10: </span>
-<span class="linenr">11: </span><span style="color: #FFE329;">class</span> <span style="color: #82A6DF;">Queen</span> : <span style="color: #FFE329;">public</span> <span style="color: #82A6DF;">Enemy</span>
+<span class="linenr">11: </span><span style="color: #82A6DF;">class</span> <span style="color: #FA583F;">Queen</span> : public Enemy
 <span class="linenr">12: </span><span style="color: #9e3655305530;">{</span>
-<span class="linenr">13: </span><span style="color: #FFE329;">public</span>:
-<span class="linenr">14: </span>    <span style="color: #FFE329;">virtual</span> <span style="color: #82A6DF;">void</span> <span style="color: #FF88FF;">Attack</span><span style="color: #7abaa445df9e;">()</span> <span style="color: #7abaa445df9e;">{</span>
+<span class="linenr">13: </span><span style="color: #FF951B;">public</span>:
+<span class="linenr">14: </span>    virtual <span style="color: #82A6DF;">void</span> <span style="color: #FF88FF;">Attack</span><span style="color: #7abaa445df9e;">()</span> <span style="color: #7abaa445df9e;">{</span>
 <span class="linenr">15: </span>        <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#25915;&#25731;&#12398;&#20966;&#29702;</span>
 <span class="linenr">16: </span>    <span style="color: #7abaa445df9e;">}</span>
 <span class="linenr">17: </span><span style="color: #9e3655305530;">}</span>;
@@ -349,14 +349,14 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org76ef88c" class="outline-3">
-<h3 id="org76ef88c">１．</h3>
-<div class="outline-text-3" id="text-org76ef88c">
+<div id="outline-container-org5c056c0" class="outline-3">
+<h3 id="org5c056c0">１．</h3>
+<div class="outline-text-3" id="text-org5c056c0">
 <p>
 以下のコードがエラーになる理由を述べよ。<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-cpp"><span class="linenr">1: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">()</span>
+<pre class="src src-c"><span class="linenr">1: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">()</span>
 <span class="linenr">2: </span><span style="color: #9e3655305530;">{</span>
 <span class="linenr">3: </span>    <span style="color: #82A6DF;">Character</span> <span style="color: #FA583F;">character</span>;
 <span class="linenr">4: </span>
@@ -367,14 +367,14 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org68c4d9a" class="outline-3">
-<h3 id="org68c4d9a">２．</h3>
-<div class="outline-text-3" id="text-org68c4d9a">
+<div id="outline-container-orge61df36" class="outline-3">
+<h3 id="orge61df36">２．</h3>
+<div class="outline-text-3" id="text-orge61df36">
 <p>
 以下のコードがエラーになる理由を述べよ。<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-cpp"><span class="linenr">1: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">()</span>
+<pre class="src src-c"><span class="linenr">1: </span><span style="color: #82A6DF;">int</span> <span style="color: #FF88FF;">main</span><span style="color: #9e3655305530;">()</span>
 <span class="linenr">2: </span><span style="color: #9e3655305530;">{</span>
 <span class="linenr">3: </span>    <span style="color: #82A6DF;">Enemy</span> <span style="color: #FA583F;">enemy</span>;
 <span class="linenr">4: </span>
@@ -387,26 +387,26 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org0f97ff3" class="outline-2">
-<h2 id="org0f97ff3">問４</h2>
-<div class="outline-text-2" id="text-org0f97ff3">
+<div id="outline-container-orgf35cf3f" class="outline-2">
+<h2 id="orgf35cf3f">問４</h2>
+<div class="outline-text-2" id="text-orgf35cf3f">
 <p>
 以下のソースコードの①～⑤を埋めよ<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-cpp"><span class="linenr"> 1: </span><span style="color: #7fffd4;">#include</span> <span style="color: #9e3655305530;">&lt;</span><span style="color: #61CE3C;">vector</span><span style="color: #9e3655305530;">&gt;</span>
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #7fffd4;">#include</span> <span style="color: #9e3655305530;">&lt;</span><span style="color: #61CE3C;">vector</span><span style="color: #9e3655305530;">&gt;</span>
 <span class="linenr"> 2: </span>
-<span class="linenr"> 3: </span><span style="color: #FFE329;">class</span> <span style="color: #82A6DF;">Sample</span>
+<span class="linenr"> 3: </span><span style="color: #82A6DF;">class</span> <span style="color: #FA583F;">Sample</span>
 <span class="linenr"> 4: </span><span style="color: #9e3655305530;">{</span>
-<span class="linenr"> 5: </span><span style="color: #FFE329;">public</span>:
-<span class="linenr"> 6: </span>    <span style="color: #FF88FF;">Sample</span><span style="color: #7abaa445df9e;">()</span>;
-<span class="linenr"> 7: </span>    <span style="color: #FFE329;">virtual</span> ~<span style="color: #FF88FF;">Sample</span><span style="color: #7abaa445df9e;">()</span>;
-<span class="linenr"> 8: </span><span style="color: #FFE329;">private</span>:
+<span class="linenr"> 5: </span><span style="color: #FF951B;">public</span>:
+<span class="linenr"> 6: </span>    Sample<span style="color: #7abaa445df9e;">()</span>;
+<span class="linenr"> 7: </span>    virtual ~Sample<span style="color: #7abaa445df9e;">()</span>;
+<span class="linenr"> 8: </span><span style="color: #FF951B;">private</span>:
 <span class="linenr"> 9: </span>    &#9312; m_pIntArray;
 <span class="linenr">10: </span>    &#9313; m_intVector;
 <span class="linenr">11: </span><span style="color: #9e3655305530;">}</span>;
 <span class="linenr">12: </span>
-<span class="linenr">13: </span><span style="color: #FF951B;">Sample</span>::<span style="color: #FF88FF;">Sample</span><span style="color: #9e3655305530;">()</span>
+<span class="linenr">13: </span>Sample::Sample<span style="color: #9e3655305530;">()</span>
 <span class="linenr">14: </span><span style="color: #9e3655305530;">{</span>
 <span class="linenr">15: </span>    <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#35201;&#32032;&#25968;10&#12398;int&#22411;&#12398;&#37197;&#21015;&#12434;new&#12375;&#12289;&#20808;&#38957;&#12450;&#12489;&#12524;&#12473;&#12434;m_pIntArray&#12395;&#20195;&#20837;</span>
 <span class="linenr">16: </span>    &#9314;
@@ -415,7 +415,7 @@ for the JavaScript code in this tag.
 <span class="linenr">19: </span>    &#9315;
 <span class="linenr">20: </span><span style="color: #9e3655305530;">}</span>
 <span class="linenr">21: </span>
-<span class="linenr">22: </span><span style="color: #FF951B;">Sample</span>::~<span style="color: #FF88FF;">Sample</span><span style="color: #9e3655305530;">()</span>
+<span class="linenr">22: </span>Sample::~Sample<span style="color: #9e3655305530;">()</span>
 <span class="linenr">23: </span><span style="color: #9e3655305530;">{</span>
 <span class="linenr">24: </span>    <span style="color: #2AA198; font-style: italic;">// </span><span style="color: #2AA198; font-style: italic;">&#24517;&#35201;&#12394;&#20966;&#29702;&#12364;&#12354;&#12428;&#12400;&#12371;&#12371;&#12395;&#35352;&#36848;</span>
 <span class="linenr">25: </span>    &#9316;

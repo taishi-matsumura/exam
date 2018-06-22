@@ -8,7 +8,7 @@
 以下のソースコードをビルドし実行した際、コンソールに何が表示されるか答えよ。
 
 Base.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #ifndef BASE_H
   #define BASE_H
 
@@ -30,7 +30,7 @@ Base.h
 #+END_SRC
 
 Base.cpp
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Base.h"
   #include "Sample1.h"
   #include <iostream>
@@ -54,7 +54,7 @@ Base.cpp
 #+END_SRC
 
 Derived.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #ifndef DERIVED_H
   #define DERIVED_H
 
@@ -77,7 +77,7 @@ Derived.h
 #+END_SRC
 
 Derived.cpp
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Derived.h"
   #include "Sample2.h"
   #include <iostream>
@@ -101,7 +101,7 @@ Derived.cpp
 #+END_SRC
 
 Sample1.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #ifndef SAMPLE1_H
   #define SAMPLE1_H
 
@@ -117,7 +117,7 @@ Sample1.h
 #+END_SRC
 
 Sample1.cpp
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Sample1.h"
   #include <iostream>
 
@@ -128,7 +128,7 @@ Sample1.cpp
 #+END_SRC
 
 Sample2.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #ifndef SAMPLE2_H
   #define SAMPLE2_H
 
@@ -144,7 +144,7 @@ Sample2.h
 #+END_SRC
 
 Sample2.cpp
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Sample2.h"
   #include <iostream>
 
@@ -155,7 +155,7 @@ Sample2.cpp
 #+END_SRC
 
 main.cpp
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Derived.h"
 
   int main()
@@ -178,7 +178,7 @@ Baseクラスのデストラクタを仮想関数にしている理由を述べよ。
 
 ** 問３
 main.cpp L.5 を以下のように変更してビルドし実行した際、コンソールに何が表示されるか答えよ。
-#+BEGIN_SRC cpp
+#+BEGIN_SRC c
 Base* pBase = new Base();
 #+END_SRC
 

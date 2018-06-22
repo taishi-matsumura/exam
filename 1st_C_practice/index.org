@@ -7,7 +7,7 @@
 ** 問１
 以下の①～②にそれぞれ適切な語句を入れ、プログラムを完成させよ。
 
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
 #include <stdio.h>
 
 /// 1989年～2018年までの、平成と西暦の対応表を出力する
@@ -29,7 +29,7 @@ int main()
 以下の①～⑧にそれぞれ適切な語句を入れ、プログラムを完成させよ。
 (ヒント：①・④・⑥は演算子、②は整数)
 
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>

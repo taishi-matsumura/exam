@@ -45,7 +45,7 @@ staticCüq‚ğ—p‚¢‚ê‚ÎAƒIƒuƒWƒFƒNƒgwŒü‚Å‚¢‚¤uƒJƒvƒZƒ‹‰»v‚ÍCŒ¾Œê‚Å‚àÀŒ»‰Â”\‚
 ˆÈ‰º‚Ì‚æ‚¤‚Èƒ\[ƒXƒR[ƒh‚ª‚ ‚éB
 
 Character.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   class Character
   {
   public:
@@ -59,7 +59,7 @@ Character.h
 #+END_SRC
 
 Player.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Character.h"
 
   class Player : public Character
@@ -74,7 +74,7 @@ Player.h
 #+END_SRC
 
 Enemy.h
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Character.h"
 
   class Enemy : public Character
@@ -89,7 +89,7 @@ Enemy.h
 #+END_SRC
 
 main.cpp
-#+BEGIN_SRC cpp -n
+#+BEGIN_SRC c -n
   #include "Player.h"
   #include "Enemy.h"
 
