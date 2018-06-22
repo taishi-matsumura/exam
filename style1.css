@@ -289,7 +289,7 @@ ul, ol, dl
 pre
 {
   background: #f6f6f6;
-  font-family: monospace;
+  font-family: "Courier New", Consolas, monospace;
   font-weight: normal;
   font-style: normal;
   white-space: pre;
