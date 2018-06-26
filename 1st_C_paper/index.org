@@ -2,25 +2,25 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: 1”N¶ ‘OŠú CŒ¾Œê Œ±
+#+TITLE: 1å¹´ç”Ÿ å‰æœŸ Cè¨€èª è©¦é¨“
 
-** –â‚P
-   ƒOƒ[ƒoƒ‹•Ï”‚Æƒ[ƒJƒ‹•Ï”‚Ìˆá‚¢‚É‚Â‚¢‚Äq‚×‚æ
+** å•ï¼‘
+   ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ã¨ãƒ­ãƒ¼ã‚«ãƒ«å¤‰æ•°ã®é•ã„ã«ã¤ã„ã¦è¿°ã¹ã‚ˆ
 
-** –â‚Q
-   ƒvƒŠƒvƒƒZƒbƒT‚Ì#include‚Æ#define‚É‚Â‚¢‚Äà–¾‚¹‚æ
+** å•ï¼’
+   ãƒ—ãƒªãƒ—ãƒ­ã‚»ãƒƒã‚µã®#includeã¨#defineã«ã¤ã„ã¦èª¬æ˜ã›ã‚ˆ
 
-** –â‚R
-   intAcharAlongAshortAfloatAdoubleŒ^‚É‚Â‚¢‚Ä‚»‚ê‚¼‚êà–¾‚¹‚æ
+** å•ï¼“
+   intã€charã€longã€shortã€floatã€doubleå‹ã«ã¤ã„ã¦ãã‚Œãã‚Œèª¬æ˜ã›ã‚ˆ
 
-** –â‚S
-   ˆÈ‰º‚ÌƒvƒƒOƒ‰ƒ€‚ğì¬‚¹‚æ
-   1. 1`100‚Ü‚Å‚Ì®”‚Ì‚¤‚¿3‚Ì”{”‚ª“ü‚Á‚½”z—ñ‚ğì¬‚·‚é
-   2. 1`100‚Ü‚Å‚Ì®”‚Ì‚¤‚¿4‚Ì”{”‚ª“ü‚Á‚½”z—ñ‚ğì¬‚·‚é
-   3. 1.‚Æ2.—¼•û‚É“ü‚Á‚Ä‚¢‚é’l‚Ì‚İ‚Å”z—ñ‚ğì¬‚·‚é
+** å•ï¼”
+   ä»¥ä¸‹ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ä½œæˆã›ã‚ˆ
+   1. 1ï½100ã¾ã§ã®æ•´æ•°ã®ã†ã¡3ã®å€æ•°ãŒå…¥ã£ãŸé…åˆ—ã‚’ä½œæˆã™ã‚‹
+   2. 1ï½100ã¾ã§ã®æ•´æ•°ã®ã†ã¡4ã®å€æ•°ãŒå…¥ã£ãŸé…åˆ—ã‚’ä½œæˆã™ã‚‹
+   3. 1.ã¨2.ä¸¡æ–¹ã«å…¥ã£ã¦ã„ã‚‹å€¤ã®ã¿ã§é…åˆ—ã‚’ä½œæˆã™ã‚‹
 
-** –â‚T
-   ˆÈ‰º‚ÌƒvƒƒOƒ‰ƒ€‚ÌAmainŠÖ”I—¹“_‚Å‚ÌaAbAcA*cAdA*d‚Ì’l‚ğ“š‚¦‚æ
+** å•ï¼•
+   ä»¥ä¸‹ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã€mainé–¢æ•°çµ‚äº†æ™‚ç‚¹ã§ã®aã€bã€cã€*cã€dã€*dã®å€¤ã‚’ç­”ãˆã‚ˆ
 #+BEGIN_SRC c -n
 int main(void) {
 	int a = 0;
@@ -33,11 +33,11 @@ int main(void) {
 }
 #+END_SRC
 
-** –â‚U
-   ‰º‹L‚ÌƒvƒƒOƒ‰ƒ€‚É‚Â‚¢‚ÄˆÈ‰º‚Ì–â‚¢‚É“š‚¦‚æ
-i‚PjƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚ğC³‚¹‚æ
-i‚QjmainŠÖ”‚ÌÅIs“_‚Å‚ÌappleApenApineappleAapplePenApineapplePen‚Ì’l‚ğ“š‚¦‚æ
-i‚RjƒvƒƒOƒ‰ƒ€ÀsŒã‚ÉƒRƒ“ƒ\[ƒ‹‚É•\¦‚³‚ê‚é•¶š—ñ‚ğ‹Lq‚¹‚æ
+** å•ï¼–
+   ä¸‹è¨˜ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã«ã¤ã„ã¦ä»¥ä¸‹ã®å•ã„ã«ç­”ãˆã‚ˆ
+ï¼ˆï¼‘ï¼‰ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã‚’ä¿®æ­£ã›ã‚ˆ
+ï¼ˆï¼’ï¼‰mainé–¢æ•°ã®æœ€çµ‚è¡Œæ™‚ç‚¹ã§ã®appleã€penã€pineappleã€applePenã€pineapplePenã®å€¤ã‚’ç­”ãˆã‚ˆ
+ï¼ˆï¼“ï¼‰ãƒ—ãƒ­ã‚°ãƒ©ãƒ å®Ÿè¡Œå¾Œã«ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã«è¡¨ç¤ºã•ã‚Œã‚‹æ–‡å­—åˆ—ã‚’è¨˜è¿°ã›ã‚ˆ
 #+BEGIN_SRC c -n
 int apple;
 int pen;
@@ -47,13 +47,15 @@ int main() {
 	apple = 0x01 << 4;
 	pen = 0x20 >> 2;
 	pineapple = 0x40 >> 4;
-	
+
 	int applePen = apple | pen;
 	int pineapplePen = pineapple | pen;
 
 	printf("HasApple(applePen) = %d\n", HasApple(applePen));
-	printf("HasAppleOrPineapple(pineapplePen) = %d\n", HasAppleOrPineApple(pineapplePen));
+	printf("HasAppleOrPineapple(pineapplePen) = %d\n", HasAppleOrPineapple(pineapplePen));
 	printf("HasAppleOrPineapple(0x06) = %d\n", HasAppleOrPineapple(0x06));
+
+	return 0;
 }
 
 int HasApple(int value) {
@@ -73,11 +75,11 @@ int HasAppleOrPineapple(int value) {
 }
 #+END_SRC
 
-** –â‚V
-   ˆÈ‰º‚ÌƒvƒƒOƒ‰ƒ€‚É‰º‹L‚Ì•ÏX‚ğ‰Á‚¦‚æB
-i‚PjŠw”N‚É‚æ‚è¶“k”‚ªŒˆ‚Ü‚é‚Ì‚ÅAŠw”N‚Å”»’f‚µ‚Ä¶“k”‚ğİ’è‚·‚éŠÖ”‚ğì¬‚·‚éB
-i‚QjŠe‰È–Úî•ñ(ut–¼AŠw”NA¶“k”)‚ğƒRƒ“ƒ\[ƒ‹‚Éo—Í‚·‚éŠÖ”‚ğì¬‚·‚éB
-i‚Rji‚Qj‚Åì¬‚µ‚½ŠÖ”‚ğ•ÏX‚µA’S“–ut‚ª¼‘º‚Ìê‡‚Ì‚İ‰È–Úî•ñ‚ğƒRƒ“ƒ\[ƒ‹‚Éo—Í‚·‚é‚æ‚¤‚É‚·‚éB
+** å•ï¼—
+   ä»¥ä¸‹ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã«ä¸‹è¨˜ã®å¤‰æ›´ã‚’åŠ ãˆã‚ˆã€‚
+ï¼ˆï¼‘ï¼‰å­¦å¹´ã«ã‚ˆã‚Šç”Ÿå¾’æ•°ãŒæ±ºã¾ã‚‹ã®ã§ã€å­¦å¹´ã§åˆ¤æ–­ã—ã¦ç”Ÿå¾’æ•°ã‚’è¨­å®šã™ã‚‹é–¢æ•°ã‚’ä½œæˆã™ã‚‹ã€‚
+ï¼ˆï¼’ï¼‰å„ç§‘ç›®æƒ…å ±(è¬›å¸«åã€å­¦å¹´ã€ç”Ÿå¾’æ•°)ã‚’ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã«å‡ºåŠ›ã™ã‚‹é–¢æ•°ã‚’ä½œæˆã™ã‚‹ã€‚
+ï¼ˆï¼“ï¼‰ï¼ˆï¼’ï¼‰ã§ä½œæˆã—ãŸé–¢æ•°ã‚’å¤‰æ›´ã—ã€æ‹…å½“è¬›å¸«ãŒæ¾æ‘ã®å ´åˆã®ã¿ç§‘ç›®æƒ…å ±ã‚’ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã«å‡ºåŠ›ã™ã‚‹ã‚ˆã†ã«ã™ã‚‹ã€‚
 
 #+BEGIN_SRC c -n
 enum TeacherType {
@@ -86,54 +88,54 @@ enum TeacherType {
 	TEACHER_MR_NAGASAWA
 };
 
-/** utî•ñ */
+/** è¬›å¸«æƒ…å ± */
 struct Teacher {
 	enum TeacherType teacherType;
 	const char* name;
 };
 
-/** ‰È–Ú */
+/** ç§‘ç›® */
 typedef struct {
-	/** ’S“–ut */
+	/** æ‹…å½“è¬›å¸« */
 	struct Teacher teacher;
-	/** Šw”N */
+	/** å­¦å¹´ */
 	unsigned int grade;
-	/** ¶“k” */
+	/** ç”Ÿå¾’æ•° */
 	unsigned int studentCount;
 } Subject;
 
 int main() {
 	struct Teacher mrMatsumura;
 	mrMatsumura.teacherType = TEACHER_MR_MATSUMURA;
-	mrMatsumura.name = "¼‘º";
+	mrMatsumura.name = "æ¾æ‘";
 
 	struct Teacher mrNakachi;
 	mrNakachi.teacherType = TEACHER_MR_NAKACHI;
-	mrNakachi.name = "’†’n";
+	mrNakachi.name = "ä¸­åœ°";
 
 	struct Teacher mrNagasawa;
 	mrNagasawa.teacherType = TEACHER_MR_NAGASAWA;
-	mrNagasawa.name = "’·àV";
-	
-	// ƒvƒƒOƒ‰ƒ€Šî‘b1
+	mrNagasawa.name = "é•·æ¾¤";
+
+	// ãƒ—ãƒ­ã‚°ãƒ©ãƒ åŸºç¤1
 	Subject programBase1;
 	programBase1.teacher = mrMatsumura;
 	programBase1.grade = 1;
 	programBase1.studentCount = 16;
 
-	// ’S”Cƒ[ƒ~1
+	// æ‹…ä»»ã‚¼ãƒŸ1
 	Subject seminar1;
 	seminar1.teacher = mrNagasawa;
 	seminar1.grade = 1;
 	seminar1.studentCount = 16;
 
-	// ƒvƒƒOƒ‰ƒ€—˜_2
+	// ãƒ—ãƒ­ã‚°ãƒ©ãƒ ç†è«–2
 	Subject programTheory2;
 	programTheory2.teacher = mrMatsumura;
 	programTheory2.grade = 2;
 	programTheory2.studentCount = 14;
 
-	// ƒQ[ƒ€ƒvƒƒOƒ‰ƒ~ƒ“ƒO2
+	// ã‚²ãƒ¼ãƒ ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°2
 	Subject gameProgramming2;
 	gameProgramming2.teacher = mrNakachi;
 	gameProgramming2.grade = 2;
@@ -141,6 +143,6 @@ int main() {
 }
 
 void SetStudentCount(Subject* pSubject) {
-	// ‚±‚±‚ğì‚Á‚Ä‚à‚ç‚¤
+	// ã“ã“ã‚’ä½œã£ã¦ã‚‚ã‚‰ã†
 }
 #+END_SRC
