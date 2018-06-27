@@ -2,111 +2,132 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: C���� ���K��� 
+#+TITLE: C言語 練習問題
 
-** ��P
-�ȉ��̇@�`�A�ɂ��ꂼ��K�؂Ȍ������A�v���O����������������B
+** 問１
+以下の①～②にそれぞれ適切な語句を入れ、プログラムを完成させよ。
 
 #+BEGIN_SRC c -n
 #include <stdio.h>
 
-/// 1989�N�`2018�N�܂ł́A�����Ɛ���̑Ή��\���o�͂���
+// 1989年～2018年までの、平成と西暦の対応表を出力する
 int main()
 {
 	int year;
 
-	// �������N��1989�N
-	for(  �@  )
+	// 平成元年は1989年
+	for(  ①  )
 	{
-		printf("%d�N <=> ����%d�N\n", year, year - �A);
+		printf("%d年 <=> 平成%d年\n", year, year - ②);
 	}
 
 	while(1);
 }
 #+END_SRC
 
-** ��Q
-�ȉ��̇@�`�G�ɂ��ꂼ��K�؂Ȍ������A�v���O����������������B
-(�q���g�F�@�E�C�E�E�͉��Z�q�A�A�͐���)
+** 問２
+以下の①～⑧にそれぞれ適切な語句を入れ、プログラムを完成させよ。
+(ヒント：①・④・⑥は演算子、②は整数)
 
 #+BEGIN_SRC c -n
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-/// 0�`9�̗����𐶐����A�l�ɉ����đ勥�`��g�����߂�
+// 0～9の乱数を生成し、値に応じて大凶～大吉を決める
 /**
- * 0�͑勥�A1�`2�͋��A3�`5�͏��g�A6�`8�͒��g�A9�͑�g�Ƃ���B
+ * 0は大凶、1～2は凶、3～5は小吉、6～8は中吉、9は大吉とする。
  */
 int main()
 {
-   	// ���ݎ������痐���̎�𐶐�
+	// 現在時刻から乱数の種を生成
 	srand((unsigned int)time(NULL));
 
-	// 0�`9�̗����𐶐�
-	int omikuji = rand() �@ �A;
+	// 0～9の乱数を生成
+	int omikuji = rand() ① ②;
 
-  	// ���݂����̌��ʕ�������i�[����ϐ�
+	// おみくじの結果文字列を格納する変数
 	char* result;
 
-	�B(omikuji �C 0)
+	③(omikuji ④ 0)
 	{
-		result = "�勥";
+		result = "大凶";
 	}
-	�D(omikuji �E 2)
+	⑤(omikuji ⑥ 2)
 	{
-		result = "��";
+		result = "凶";
 	}
-	�D(omikuji �E 5)
+	⑤(omikuji ⑥ 5)
 	{
-		result = "���g";
+		result = "小吉";
 	}
-	�D(omikuji �E 8)
+	⑤(omikuji ⑥ 8)
 	{
-		result = "���g";
+		result = "中吉";
 	}
-	�F
+	⑦
 	{
-		result = "��g";
+		result = "大吉";
 	}
 
-	// ���݂����̌��ʂ���ʂɕ\������
-	printf("�G�ł�", result);
+	// おみくじの結果を画面に表示する
+	printf("⑧です", result);
 
 	while(1);
 }
 #+END_SRC
 
-** ��R
-���L�d�l�𖞂���C����v���O�������쐬����B
+** 問３
+下記仕様を満たすC言語プログラムを作成せよ。
 
-�E10�~10��2�����z��𐶐����A�Q�d���[�v��p���ĉ��}�̂悤�ɒl��ݒ肷��B
-�E�l��ݒ肵���Q�����z��̒��g��printf�֐���p���ĉ�ʂɕ\������B(�\���`���͖��Ȃ�)
+・10×10の2次元配列を生成し、２重ループを用いて下図のように値を設定する。
+・値を設定した２次元配列の中身をprintf関数を用いて画面に表示する。(表示形式は問わない)
 |---+---+----+----+----+----+----+----+----+----|
 | 2 | 0 |  4 |  6 |  8 | 10 | 12 | 14 | 16 | 18 |
 | 5 | 3 |  7 |  9 | 11 | 13 | 15 | 17 | 19 | 21 |
 | 8 | 6 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 |
 |---+---+----+----+----+----+----+----+----+----|
-�@�@�r���ȗ�
+　　途中省略
 |----+----+----+----+----+----+----+----+----+----|
 | 21 | 23 | 25 | 27 | 29 | 31 | 33 | 35 | 37 | 39|
 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40 | 42 |
 | 27 | 29 | 31 | 33 | 35 | 37 | 39 | 41 | 43 | 45 |
 |----+----+----+----+----+----+----+----+----+----|
 
-** ��S
-���L�d�l�𖞂���C����v���O�������쐬����B
+** 問４
+下記仕様を満たすC言語プログラムを作成せよ。
 
-- main�֐�����int�^�̕ϐ���2�錾���A�K���Ȓl�ŏ���������B
-- ��L�ϐ��̒l�����ւ���֐����쐬���Amain�֐�����Ăяo���B
-- 2�̕ϐ��̒l��printf�֐��ŉ�ʂɕ\�����A�l������ւ�������Ƃ��m�F����B
+- main関数内でint型の変数を2つ宣言し、適当な値で初期化する。
+- 上記変数の値を入れ替える関数を作成し、main関数から呼び出す。
+- 2つの変数の値をprintf関数で画面に表示し、値が入れ替わったことを確認する。
 
-** ��T
-���L�d�l�𖞂���C����v���O�������쐬����B
+** 問５
+下記仕様を満たすC言語プログラムを作成せよ。
 
-- char�^�̃����o��2���\���̂��`����B
-  ��`����typedef��p���A�Ȍ�g�p����ۂɁustruct�v�ƋL�q���Ȃ��čςނ悤�ɂ��邱�ƁB
-- main�֐����ŏ�L�\���̌^�̕ϐ���錾���A�e�����o��K���ȕ����ŏ���������B
-- ��L�����o�̒l�����ւ���֐����쐬���Amain�֐�����Ăяo���B
-  �������A���Y�֐��̈����̌���1�Ƃ���B
-- 2�̃����o�̒l��printf�֐��ŉ�ʂɕ\�����A�l������ւ�������Ƃ��m�F����B
+- char型のメンバを2つ持つ構造体を定義する。
+  定義時にtypedefを用い、以後使用する際に「struct」と記述しなくて済むようにすること。
+- main関数内で上記構造体型の変数を宣言し、各メンバを適当な文字で初期化する。
+- 上記メンバの値を入れ替える関数を作成し、main関数から呼び出す。
+  ただし、当該関数の引数の個数は1つとする。
+- 2つのメンバの値をprintf関数で画面に表示し、値が入れ替わったことを確認する。
+
+** 問６
+以下のプログラムを完成させよ。
+ただしグローバル変数は用いないこと。
+#+BEGIN_SRC c -n
+bool CountTen() {
+	/* 10回呼び出されたら、その旨をprintf()で表示する */
+
+	/* 通常はfalseを返却する。*/
+	/* 10回呼び出されたらtrueを返却し、記憶している呼び出し回数をリセット */
+}
+
+int main() {
+	while (true)
+	{
+		/* 1秒おきにCountTen()を呼び出す */
+	}
+
+	return 0;
+}
+#+END_SRC
