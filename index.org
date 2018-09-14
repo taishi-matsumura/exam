@@ -7,3 +7,4 @@
 * [[file:1st_C_practice/index.html][C言語 練習問題]]
 * [[file:1st_C_paper/index.html][C言語筆記試験]]
 * [[file:1st_DirectX/index.html][前期 DirectX課題]]
+* [[file:2nd_DirectX/index.html][後期 DirectX課題]]
