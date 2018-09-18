@@ -2,9 +2,11 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: 1年生 プログラム理論試験(第２回)
-添付のソースコードは、あるゲームのタイトルシーンで使用されるクラス群である。
+#+TITLE: 1年生 UML試験
+* ソースコードを解析してUMLを作成する
+下記にアップロードされているソースコードは、あるゲームのタイトルシーンで使用されるクラス群である。
 これらを解析し以下の問いに答えよ。
+[[https://gist.github.com/taishi-matsumura/7775ad0725537e0df748c69177fc509a][ソースコード]]
 
 ** 問１
 これらのクラス群について、クラス図を作成せよ。
