@@ -2,7 +2,7 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: 1年生 プログラム基礎試験(第３回)
+#+TITLE: 1年生 C++筆記試験(その３)
 
 ** 問１
 以下のソースコード内の①～⑭を埋めよ。
