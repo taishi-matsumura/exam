@@ -11,4 +11,5 @@
 * [[file:2nd_CPP_2/index.html][C++筆記試験 その2]]
 * [[file:2nd_CPP_3/index.html][C++筆記試験 その3]]
 * [[file:2nd_UML/index.html][UML試験]]
+* [[file:2nd_misc/index.html][後期 プログラム理論(ごった煮)試験]]
 * [[file:2nd_DirectX/index.html][後期 DirectX課題]]

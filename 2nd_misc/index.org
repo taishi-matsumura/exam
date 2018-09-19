@@ -2,25 +2,30 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: 1”N¶ ƒvƒƒOƒ‰ƒ€—˜_ŽŽŒ±(‘æ‚P‰ñ)
+#+TITLE: 1”N¶ ƒvƒƒOƒ‰ƒ€—˜_ŽŽŒ±
 
-** –â‚P
+** –â1
 10i”‚Ì‰‰ŽZŽ® 7€32 ‚ÌŒ‹‰Ê‚ð 2i”‚Å•\‚¹B
 
 
-** –â‚Q
+** –â2
 16 i¬” 2A.4C‚ð u2^{n} { 2^{n-1} { ...v‚ÌŒ`Ž®‚Å•\‚í‚¹B
 (Šî–{î•ñ‹ZpŽÒ •½¬22”NtŠú Œß‘O–â1 ‰ü)
 
 
-** –â‚R
+** –â3
+ƒQ[ƒ€‚ÌŠJ”­‚É—p‚¢‚é“‡ƒtƒ@ƒCƒ‹(•¡”‚Ì‰æ‘œ‚ð1–‡‚É“Z‚ß‚½ƒtƒ@ƒCƒ‹)‚ÌƒTƒCƒY‚ÍAc‰¡‹¤‚É2‚Ì—Ýæ‚ÌƒsƒNƒZƒ‹”‚É‚·‚×‚«‚Æ‚³‚ê‚Ä‚¢‚éB
+‚»‚Ì——R‚ð”Ž®‚âu2i”vu¬”vutu/tvv“™‚ÌŒ¾—t‚ð—p‚¢‚Äà–¾‚¹‚æB
+
+
+** –â4
 }‚ÉŽ¦‚·16ƒrƒbƒg‚Ì•‚“®¬”“_Œ`Ž®‚É‚¨‚¢‚ÄC10i” 0.25 ‚ð³‹K‰»‚µ‚Ä•\Œ»‚¹‚æB
 ‚±‚±‚ÅC³‹K‰»‚Í‰¼”•”‚ÌÅãˆÊ‚¯‚½‚ª1‚É‚È‚é‚æ‚¤‚ÉŽw”•”‚Æ‰¼”•”‚ð’²ß‚·‚é‘€ì‚Æ‚·‚éB
 (‰ž—pî•ñ‹ZpŽÒ •½¬22”NtŠú Œß‘O–â2 ‰ü)
 [[./01.gif]]
 
 
-** –â4
+** –â5
 ŽŸ‚Ì•‚“®¬”“_•\Ž¦–@‚ª‚ ‚éB¬”“_‚Í‰¼”•”‚Ì¶‚É‚ ‚èCŽw”‚Í64‚Ì"‰º‘Ê(‚°‚½)—š‚«•\Œ»"‚Å‚ ‚Á‚ÄC
 ’l‚Í (-1)^{s}~0.f~2^{e-64} ‚Å‚ ‚éB
 “ñ‚Â‚Ì16i”45BF0000‚Æ41300000‚ðC‚±‚Ì•‚“®¬”“_•\Ž¦–@‚Å•\Œ»‚³‚ê‚½’l‚Æ‚µ‚Ä‰ÁŽZ‚µ‚½Œ‹‰Ê‚ð‹‚ß‚æB
@@ -28,7 +33,7 @@
 [[./02.gif]]
 
 
-** –â‚T
+** –â6
 *** ‚PD
 CŒ¾Œê‚É‚¨‚¯‚éstaticCüŽq‚ð
 Eƒ[ƒJƒ‹•Ï”
@@ -41,7 +46,7 @@ staticCüŽq‚ð—p‚¢‚ê‚ÎAƒIƒuƒWƒFƒNƒgŽwŒü‚Å‚¢‚¤uƒJƒvƒZƒ‹‰»v‚ÍCŒ¾Œê‚Å‚àŽÀŒ»‰Â”\‚
 ‚»‚Ì——R‚ðC++Œ¾Œê‚Æ‘Î”ä‚µ‚Äà–¾‚¹‚æB
 
 
-** –â‚U
+** –â7
 ˆÈ‰º‚Ì‚æ‚¤‚Èƒ\[ƒXƒR[ƒh‚ª‚ ‚éB
 
 Character.h
