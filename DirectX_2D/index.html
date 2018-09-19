@@ -3,9 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
+<!-- 2018-09-19 水 17:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1年生 後期 DirectX試験(第2回)</title>
+<title>DirectX(2D) 提出課題</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -228,80 +229,129 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">1年生 後期 DirectX試験(第2回)</h1>
+<h1 class="title">DirectX(2D) 提出課題</h1>
 
-<div id="outline-container-org517cc56" class="outline-2">
-<h2 id="org517cc56">問１</h2>
-<div class="outline-text-2" id="text-org517cc56">
+<div id="outline-container-org5a75988" class="outline-2">
+<h2 id="org5a75988">以下の各STEPについて、それぞれ別の実行ファイルとしてプログラムを作成せよ</h2>
+<div class="outline-text-2" id="text-org5a75988">
+<ul class="org-ul">
+<li><b>ソリューション名は「Exercise」とし、その配下に各STEPのプロジェクトを作成すること</b><br /></li>
+<li><b>各STEPで必要となるDirectXの関数やWin32APIを列挙しているので、不明な点はMSDN等で調べること</b><br /></li>
+<li><b>Windowsのプログラミングに慣れることが目的なので、前のSTEPの内容を丸々コピペするのは極力避けること</b><br /></li>
+</ul>
 </div>
-<div id="outline-container-orgfcae602" class="outline-3">
-<h3 id="orgfcae602">その１</h3>
-<div class="outline-text-3" id="text-orgfcae602">
-<p>
-逆行列とはどのようなものか、「単位行列」という言葉を用いて説明せよ<br />
-</p>
+<div id="outline-container-orga0b7bce" class="outline-3">
+<h3 id="orga0b7bce">STEP1 空のWindowの生成</h3>
+<div class="outline-text-3" id="text-orga0b7bce">
+<ol class="org-ol">
+<li>空のプロジェクトを作成し、WinMainを作成する。この時点では空関数でよい。<br /></li>
+<li>WM_QUITメッセージが来るまでループするwhile文(for/do whileでも可)を作成する。(以後、これをメインループと呼ぶ)<br /></li>
+<li>メインループが無駄に超高速で回らないよう、Sleep()を用いてループ一回ごとに1msのwaitを挟む。<br /></li>
+<li>自作のウィンドウプロシージャを作成し、空のWindowを生成する。ウィンドウプロシージャの名前は自分で決めること。<br /></li>
+<li>任意のウィンドウタイトルを設定し、期待通りに反映されていることを目視確認すること。<br /></li>
+</ol>
 </div>
-</div>
-
-<div id="outline-container-org763c9c8" class="outline-3">
-<h3 id="org763c9c8">その２</h3>
-<div class="outline-text-3" id="text-org763c9c8">
-<p>
-逆行列を作成するDirectXのヘルパー関数の名前を書け<br />
-</p>
-D3DXMatrix<span class="bb"> </span>
-</div>
-</div>
-
-<div id="outline-container-org0e759ea" class="outline-3">
-<h3 id="org0e759ea">その３</h3>
-<div class="outline-text-3" id="text-org0e759ea">
-<p>
-ビルボードとはどのようなものか、使用する利点と使用例を併せて説明せよ<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org472ce28" class="outline-3">
-<h3 id="org472ce28">その４</h3>
-<div class="outline-text-3" id="text-org472ce28">
-<p>
-ビルボーディングを実現する手順を書け<br />
-</p>
+<div id="outline-container-org98bc6cb" class="outline-4">
+<h4 id="org98bc6cb">使用する関数：</h4>
+<div class="outline-text-4" id="text-org98bc6cb">
+<ul class="org-ul">
+<li>RegisterClass()<br /></li>
+<li>CreateWindow()<br /></li>
+<li>PeekMessage()<br /></li>
+<li>TranslateMessage()<br /></li>
+<li>DispatchMessage()<br /></li>
+<li>timeBeginPeriod()<br /></li>
+<li>Sleep()<br /></li>
+<li>timeEndPeriod()<br /></li>
+</ul>
 </div>
 </div>
 </div>
 
+<div id="outline-container-org201f2a9" class="outline-3">
+<h3 id="org201f2a9">STEP2 ポリゴンを一枚描画</h3>
+<div class="outline-text-3" id="text-org201f2a9">
+<ol class="org-ol">
+<li>DirectXオブジェクトを生成/初期化する。<br /></li>
+<li>DirectXデバイスを生成する。<br /></li>
+<li>自作の描画関数を作成する。この時点では空関数でよい。<br /></li>
+<li>当該関数がメインループの中から毎秒60回呼ばれるようにする。<br /></li>
+<li>当該関数内で頂点を3つ作成し、ポリゴンを1枚描画する。<br /></li>
+<li>プログラム終了時にDirectXの各オブジェクトを解放する。<br /></li>
+</ol>
+</div>
+<div id="outline-container-org10b428d" class="outline-4">
+<h4 id="org10b428d">使用する関数：</h4>
+<div class="outline-text-4" id="text-org10b428d">
+<ul class="org-ul">
+<li>GetAdapterDisplayMode()<br /></li>
+<li>Direct3DCreate9()<br /></li>
+<li>IDirect3D9::CreateDevice()<br /></li>
+<li>timeGetTime()<br /></li>
+<li>IDirect3DDevice9::SetFVF()<br /></li>
+<li>IDirect3DDevice9::Clear()<br /></li>
+<li>IDirect3DDevice9::BeginScene()<br /></li>
+<li>IDirect3DDevice9::DrawPrimitiveUP()<br /></li>
+<li>IDirect3DDevice9::EndScene()<br /></li>
+<li>IDirect3DDevice9::Present()<br /></li>
+<li>IDirect3DDevice9::Release()<br /></li>
+<li>IDirect3D9::Release()<br /></li>
+</ul>
+</div>
+</div>
+</div>
 
-<div id="outline-container-org59e559d" class="outline-2">
-<h2 id="org59e559d">問２</h2>
-<div class="outline-text-2" id="text-org59e559d">
+<div id="outline-container-org936f78b" class="outline-3">
+<h3 id="org936f78b">STEP3 矩形の描画</h3>
+<div class="outline-text-3" id="text-org936f78b">
+<ol class="org-ol">
+<li>頂点を4つにし、ポリゴンを2枚用いて矩形を描画する。<br /></li>
+<li>任意の透過pngファイルをロードし、テクスチャを生成する。<br /></li>
+<li>生成したテクスチャを、前述の矩形領域に貼り付けて描画する。<br /></li>
+</ol>
 </div>
-<div id="outline-container-org3e389fb" class="outline-3">
-<h3 id="org3e389fb">その１</h3>
-<div class="outline-text-3" id="text-org3e389fb">
-<p>
-3次元ベクトルに4×4の行列を掛け、計算結果を3次元ベクトルとして返すDirectXのヘルパー関数の名前を書け<br />
-</p>
-D3DXVec3<span class="bb"> </span>
+<div id="outline-container-orgcff56d8" class="outline-4">
+<h4 id="orgcff56d8">使用する関数：</h4>
+<div class="outline-text-4" id="text-orgcff56d8">
+<ul class="org-ul">
+<li>IDirect3DDevice9::SetRenderState()<br /></li>
+<li>IDirect3DDevice9::SetTextureStageState()<br /></li>
+<li>D3DXCreateTextureFromFile()<br /></li>
+<li>SetTexture()<br /></li>
+</ul>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org2b8a1b3" class="outline-3">
-<h3 id="org2b8a1b3">その２</h3>
-<div class="outline-text-3" id="text-org2b8a1b3">
-<p>
-任意の点Cを中心にジオメトリを円運動させる手順を書け<br />
-</p>
+<div id="outline-container-org6d88cf2" class="outline-3">
+<h3 id="org6d88cf2">STEP4 キーボードの状態の取得</h3>
+<div class="outline-text-3" id="text-org6d88cf2">
+<ol class="org-ol">
+<li>DirectInputオブジェクトを生成する。<br /></li>
+<li>DirectInputキーボードデバイスを生成する。<br /></li>
+<li>キーボードのデータ形式と強調レベルを設定する。<br /></li>
+<li>自作の操作関数を作成する。この時点では空関数でよい。<br /></li>
+<li>当該関数がメインループの中から毎秒60回呼ばれるようにする。<br /></li>
+<li>当該関数内でキーボードへのアクセス権を獲得し、キーボードの状態を取得する。<br /></li>
+<li>STEP3で作成した矩形を、カーソルキーを操作することで上下左右に移動させる。<br /></li>
+<li>プログラム終了時にキーボードへのアクセス権の解放と各オブジェクトを解放する。<br /></li>
+</ol>
 </div>
+<div id="outline-container-orgc7c0637" class="outline-4">
+<h4 id="orgc7c0637">使用する関数：</h4>
+<div class="outline-text-4" id="text-orgc7c0637">
+<ul class="org-ul">
+<li>DirectInput8Create()<br /></li>
+<li>IDirectInput8::CreateDevice()<br /></li>
+<li>IDirectInputDevice8::SetDataFormat()<br /></li>
+<li>IDirectInputDevice8::SetCooperativeLevel()<br /></li>
+<li>IDirectInputDevice8::Acquire()<br /></li>
+<li>IDirectInputDevice8::GetDeviceState()<br /></li>
+<li>IDirectInputDevice8::Unacquire()<br /></li>
+<li>IDirectInputDevice8::Release()<br /></li>
+<li>IDirectInput8::Release()<br /></li>
+</ul>
 </div>
-
-<div id="outline-container-orgd22d63b" class="outline-3">
-<h3 id="orgd22d63b">その３</h3>
-<div class="outline-text-3" id="text-orgd22d63b">
-<p>
-ジオメトリをステップ移動させる手順を書け<br />
-</p>
 </div>
 </div>
 </div>

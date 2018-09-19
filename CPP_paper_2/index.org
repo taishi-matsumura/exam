@@ -1,0 +1,203 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: C++ 筆記試験(その２)
+
+** 問1
+以下のソースコードをビルドし実行した際、コンソールに何が表示されるか答えよ。
+
+*** Base.h
+#+BEGIN_SRC c -n
+  #ifndef BASE_H
+  #define BASE_H
+
+  class Sample1;
+
+  class Base
+  {
+  public:
+      Base();
+      virtual ~Base();
+      inline void Func1() { Func2(); }
+
+  private:
+      virtual void Func2();
+      Sample1* m_pSample1;
+  };
+
+  #endif // BASE_H
+#+END_SRC
+-----
+
+*** Base.cpp
+#+BEGIN_SRC c -n
+  #include "Base.h"
+  #include "Sample1.h"
+  #include <iostream>
+
+  Base::Base()
+  {
+      std::cout << "Base::Base()" << std::endl;
+      m_pSample1 = new Sample1();
+  }
+
+  Base::~Base()
+  {
+      std::cout << "Base::~Base()" << std::endl;
+      delete m_pSample1;
+  }
+
+  void Base::Func2()
+  {
+      m_pSample1->Func();
+  }
+#+END_SRC
+-----
+
+*** Derived.h
+#+BEGIN_SRC c -n
+  #ifndef DERIVED_H
+  #define DERIVED_H
+
+  #include "Base.h"
+
+  class Sample2;
+
+  class Derived : public Base
+  {
+  public:
+      Derived();
+      virtual ~Derived();
+
+  private:
+      virtual void Func2();
+      Sample2* m_pSample2;
+  };
+
+  #endif // DERIVED_H
+#+END_SRC
+-----
+
+*** Derived.cpp
+#+BEGIN_SRC c -n
+  #include "Derived.h"
+  #include "Sample2.h"
+  #include <iostream>
+
+  Derived::Derived()
+  {
+      std::cout << "Derived::Derived()" << std::endl;
+      m_pSample2 = new Sample2();
+  }
+
+  Derived::~Derived()
+  {
+      std::cout << "Derived::~Derived()" << std::endl;
+      delete m_pSample2;
+  }
+
+  void Derived::Func2()
+  {
+      m_pSample2->Func();
+  }
+#+END_SRC
+-----
+
+*** Sample1.h
+#+BEGIN_SRC c -n
+  #ifndef SAMPLE1_H
+  #define SAMPLE1_H
+
+  class Sample1
+  {
+  public:
+      Sample1() {}
+      ~Sample1() {}
+      void Func();
+  };
+
+  #endif // SAMPLE1_H
+#+END_SRC
+-----
+
+*** Sample1.cpp
+#+BEGIN_SRC c -n
+  #include "Sample1.h"
+  #include <iostream>
+
+  void Sample1::Func()
+  {
+      std::cout << "Sample1::Func()" << std::endl;
+  }
+#+END_SRC
+-----
+
+*** Sample2.h
+#+BEGIN_SRC c -n
+  #ifndef SAMPLE2_H
+  #define SAMPLE2_H
+
+  class Sample2
+  {
+  public:
+      Sample2() {}
+      ~Sample2() {}
+      void Func();
+  };
+
+  #endif // SAMPLE2_H
+#+END_SRC
+-----
+
+*** Sample2.cpp
+#+BEGIN_SRC c -n
+  #include "Sample2.h"
+  #include <iostream>
+
+  void Sample2::Func()
+  {
+      std::cout << "Sample2::Func()" << std::endl;
+  }
+#+END_SRC
+-----
+
+*** main.cpp
+#+BEGIN_SRC c -n
+  #include "Derived.h"
+
+  int main()
+  {
+      Base* pBase = new Derived();
+
+      pBase->Func1();
+
+      delete pBase;
+
+      while(1);
+      return 0;
+  }
+#+END_SRC
+-----
+
+** 問2
+Baseクラスのデストラクタを仮想関数にしている理由を述べよ。
+
+** 問3
+main.cpp L.5 を以下のように変更してビルドし実行した際、コンソールに何が表示されるか答えよ。
+#+BEGIN_SRC c
+Base* pBase = new Base();
+#+END_SRC
+
+** 問4
+Base::m_pSample1が以下のような仕様だったとする。
+・Baseクラスのインスタンス生成時点ではSample1クラスのインスタンスを生成しない
+・Baseクラスの生存期間内にm_pSample1が指すインスタンスが変更される可能性がある
+・Sample1クラスのインスタンスが生成されないままBaseクラスの生存期間が終了する可能性がある
+
+このとき、
+・コンストラクタ
+・デストラクタ
+・m_pSample1へのアクセス時
+・Sample1クラスのインスタンス破棄時
+のそれぞれについて、どのような点に注意してコーディングすべきか、その理由と併せて答えよ。

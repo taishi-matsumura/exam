@@ -2,14 +2,17 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
 
-#+TITLE: プログラム専攻 練習問題・筆記試験
+#+TITLE: プログラム専攻 練習問題・筆記試験・提出課題
 
-* [[file:1st_C_practice/index.html][C言語 練習問題]]
-* [[file:1st_C_paper/index.html][C言語筆記試験]]
-* [[file:1st_DirectX/index.html][前期 DirectX課題]]
-* [[file:2nd_CPP_1/index.html][C++筆記試験 その1]]
-* [[file:2nd_CPP_2/index.html][C++筆記試験 その2]]
-* [[file:2nd_CPP_3/index.html][C++筆記試験 その3]]
-* [[file:2nd_UML/index.html][UML試験]]
-* [[file:2nd_misc/index.html][後期 プログラム理論(ごった煮)試験]]
-* [[file:2nd_DirectX/index.html][後期 DirectX課題]]
+* 1年生 前期
+** [[file:C_practice/index.html][C言語 練習問題]]
+** [[file:C_paper/index.html][C言語 筆記試験]]
+** [[file:DirectX_2D/index.html][DirectX(2D) 提出課題]]
+
+* 1年生 後期
+** [[file:CPP_paper_1/index.html][C++ 筆記試験(その1)]]
+** [[file:CPP_paper_2/index.html][C++ 筆記試験(その2)]]
+** [[file:CPP_paper_3/index.html][C++ 筆記試験(その3)]]
+** [[file:UML/index.html][UML 筆記試験]]
+** [[file:misc/index.html][プログラム理論(ごった煮) 筆記試験]]
+** [[file:DirectX_3D/index.html][DirectX(3D) 提出課題]]

@@ -2,24 +2,24 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: 1年生 前期 C言語 試験
+#+TITLE: C言語 筆記試験
 
-** 問１
+** 問1
    グローバル変数とローカル変数の違いについて述べよ
 
-** 問２
+** 問2
    プリプロセッサの#includeと#defineについて説明せよ
 
-** 問３
+** 問3
    int、char、long、short、float、double型についてそれぞれ説明せよ
 
-** 問４
+** 問4
    以下のプログラムを作成せよ
    1. 1～100までの整数のうち3の倍数が入った配列を作成する
    2. 1～100までの整数のうち4の倍数が入った配列を作成する
    3. 1.と2.両方に入っている値のみで配列を作成する
 
-** 問５
+** 問5
    以下のプログラムの、main関数終了時点でのa、b、c、*c、d、*dの値を答えよ
 #+BEGIN_SRC c -n
 int main(void) {
@@ -33,7 +33,7 @@ int main(void) {
 }
 #+END_SRC
 
-** 問６
+** 問6
    下記のプログラムについて以下の問いに答えよ
 （１）コンパイルエラーを修正せよ
 （２）main関数の最終行時点でのapple、pen、pineapple、applePen、pineapplePenの値を答えよ
@@ -75,7 +75,7 @@ int HasAppleOrPineapple(int value) {
 }
 #+END_SRC
 
-** 問７
+** 問7
    以下のプログラムに下記の変更を加えよ。
 （１）学年により生徒数が決まるので、学年で判断して生徒数を設定する関数を作成する。
 （２）各科目情報(講師名、学年、生徒数)をコンソールに出力する関数を作成する。

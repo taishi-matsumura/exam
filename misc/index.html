@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1年生 C++筆記試験(その１)</title>
+<title>プログラム理論(ごった煮) 筆記試験</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -228,95 +228,194 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">1年生 C++筆記試験(その１)</h1>
+<h1 class="title">プログラム理論(ごった煮) 筆記試験</h1>
 
-<div id="outline-container-org3d9668b" class="outline-2">
-<h2 id="org3d9668b">問１</h2>
-<div class="outline-text-2" id="text-org3d9668b">
+<div id="outline-container-org25600e7" class="outline-2">
+<h2 id="org25600e7">問1</h2>
+<div class="outline-text-2" id="text-org25600e7">
 <p>
-以下のメンバを持つPlayerクラスを作成せよ。<br />
-・レベル、ヒットポイント、攻撃力、防御力(いずれもint型)<br />
-・上記メンバを初期化する関数<br />
-・上記メンバの値を表示する関数<br />
-・デフォルトコンストラクタ、デストラクタ(いずれも空関数で良い)<br />
-</p>
-
-<p>
-メンバ変数はカプセル化し、Playerクラスのメンバ関数以外からは<br />
-読み書きできないようにすること。<br />
+10進数の演算式 7÷32 の結果を 2進数で表せ。<br />
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org51ee38f" class="outline-2">
-<h2 id="org51ee38f">問２</h2>
-<div class="outline-text-2" id="text-org51ee38f">
+<div id="outline-container-org81b8a0e" class="outline-2">
+<h2 id="org81b8a0e">問2</h2>
+<div class="outline-text-2" id="text-org81b8a0e">
 <p>
-レベルを指定しなければデフォルト値「１」がメンバ変数に設定され、<br />
-値を指定した場合はその値がメンバ変数に設定されるよう、<br />
-初期化関数の仕様をデフォルト引数を用いて変更せよ。<br />
+16 進小数 2A.4Cを 「2<sup>n</sup> ＋ 2<sup>n-1</sup> ＋ &#x2026;」の形式で表わせ。<br />
+(基本情報技術者 平成22年春期 午前問1 改)<br />
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-orgd706308" class="outline-2">
-<h2 id="orgd706308">問３</h2>
-<div class="outline-text-2" id="text-orgd706308">
+<div id="outline-container-org8f2d093" class="outline-2">
+<h2 id="org8f2d093">問3</h2>
+<div class="outline-text-2" id="text-org8f2d093">
 <p>
-問２で作成した初期化関数をオーバーロードし、４つのメンバ変数を固定値で初期化する引数無しの関数を作成せよ。<br />
+ゲームの開発に用いる統合ファイル(複数の画像を1枚に纏めたファイル)のサイズは、縦横共に2の累乗のピクセル数にすべきとされている。<br />
+その理由を数式や「2進数」「小数」「tu/tv」等の言葉を用いて説明せよ。<br />
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org0a1986a" class="outline-2">
-<h2 id="org0a1986a">問４</h2>
-<div class="outline-text-2" id="text-org0a1986a">
+<div id="outline-container-org32b94f3" class="outline-2">
+<h2 id="org32b94f3">問4</h2>
+<div class="outline-text-2" id="text-org32b94f3">
 <p>
-問２・問３で作成した初期化関数を削除し、同等の機能をコンストラクタだけを用いて実現せよ。<br />
-その際、コンストラクタ内でメンバ変数に値を代入するのではなく、<br />
-メンバイニシャライザを用いること。<br />
+図に示す16ビットの浮動小数点形式において，10進数 0.25 を正規化して表現せよ。<br />
+ここで，正規化は仮数部の最上位けたが1になるように指数部と仮数部を調節する操作とする。<br />
+(応用情報技術者 平成22年春期 午前問2 改)<br />
+<img src="./01.gif" alt="01.gif" /><br />
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-orgdbc6cc8" class="outline-2">
-<h2 id="orgdbc6cc8">問５</h2>
-<div class="outline-text-2" id="text-orgdbc6cc8">
+<div id="outline-container-org1d2c154" class="outline-2">
+<h2 id="org1d2c154">問5</h2>
+<div class="outline-text-2" id="text-org1d2c154">
 <p>
-Playerクラスと同じメンバを持つEnemyクラスを作成し、PlayerクラスとEnemyクラスにそれぞれ固有のメンバを追加するものとする。<br />
-ここで、PlayerクラスとEnemyクラスを汎化したCharacterクラスを作成せよ。<br />
-また、それに伴いPlayerクラスとEnemyクラスを修正せよ。<br />
+次の浮動小数点表示法がある。小数点は仮数部の左にあり，指数は64の"下駄(げた)履き表現"であって，<br />
+値は (-1)<sup>s</sup>×0.f×2<sup>e-64</sup> である。<br />
+二つの16進数45BF0000と41300000を，この浮動小数点表示法で表現された値として加算した結果を求めよ。<br />
+(ソフトウェア開発技術者 平成20年春期 午前問2 改)<br />
+<img src="./02.gif" alt="02.gif" /><br />
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org37ad9c6" class="outline-2">
-<h2 id="org37ad9c6">問６</h2>
-<div class="outline-text-2" id="text-org37ad9c6">
+<div id="outline-container-org6e62773" class="outline-2">
+<h2 id="org6e62773">問6</h2>
+<div class="outline-text-2" id="text-org6e62773">
+</div>
+<div id="outline-container-org1b927c5" class="outline-3">
+<h3 id="org1b927c5">１．</h3>
+<div class="outline-text-3" id="text-org1b927c5">
 <p>
-PlayerクラスとEnemyクラスのインスタンスを生成する際、メンバの初期値の設定方法について以下の２つの案が考えられる。<br />
-１.インスタンスを生成する主体が初期値を指定する<br />
-２.PlayerクラスとEnemyクラスが初期値を指定する<br />
-</p>
-
-<p>
-それぞれに対応したコンストラクタを作成せよ。<br />
+C言語におけるstatic修飾子を<br />
+・ローカル変数<br />
+・グローバル変数<br />
+・関数<br />
+に付けた場合、それぞれどのような効果が得られるか説明せよ。<br />
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org502fd64" class="outline-2">
-<h2 id="org502fd64">問７</h2>
-<div class="outline-text-2" id="text-org502fd64">
+<div id="outline-container-orgbf4edff" class="outline-3">
+<h3 id="orgbf4edff">２．</h3>
+<div class="outline-text-3" id="text-orgbf4edff">
 <p>
-問６のそれぞれの案の長所・短所を述べよ。<br />
+static修飾子を用いれば、オブジェクト指向でいう「カプセル化」はC言語でも実現可能である。<br />
+その理由をC++言語と対比して説明せよ。<br />
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org09efef3" class="outline-2">
+<h2 id="org09efef3">問7</h2>
+<div class="outline-text-2" id="text-org09efef3">
+<p>
+以下のようなソースコードがある。<br />
+</p>
+
+<p>
+Character.h<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Character</span>
+<span class="linenr"> 2: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 3: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr"> 4: </span>    Character<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 5: </span>    ~Character<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span><span style="color: #a45bad;">private</span>:
+<span class="linenr"> 8: </span>    <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">m_level</span>;
+<span class="linenr"> 9: </span>    <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">m_hitPoint</span>;
+<span class="linenr">10: </span><span style="color: #4f97d7;">}</span>;
+</pre>
+</div>
+
+<p>
+Player.h<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Character.h"</span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Player</span> : public Character
+<span class="linenr"> 4: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 5: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr"> 6: </span>    Player<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 7: </span>    ~Player<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span><span style="color: #a45bad;">private</span>:
+<span class="linenr">10: </span>    <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">m_skillLevel</span>;
+<span class="linenr">11: </span><span style="color: #4f97d7;">}</span>;
+</pre>
+</div>
+
+<p>
+Enemy.h<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Character.h"</span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Enemy</span> : public Character
+<span class="linenr"> 4: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 5: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr"> 6: </span>    Enemy<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 7: </span>    ~Enemy<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span><span style="color: #a45bad;">private</span>:
+<span class="linenr">10: </span>    <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">m_attackRate</span>;
+<span class="linenr">11: </span><span style="color: #4f97d7;">}</span>;
+</pre>
+</div>
+
+<p>
+main.cpp<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Player.h"</span>
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Enemy.h"</span>
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span class="linenr"> 5: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 6: </span>    <span style="color: #ce537a; font-weight: bold;">Player</span> <span style="color: #7590db;">player</span>;
+<span class="linenr"> 7: </span>    <span style="color: #ce537a; font-weight: bold;">Enemy</span> <span style="color: #7590db;">enemy</span>;
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span>    <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span class="linenr">10: </span><span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgae542dc" class="outline-3">
+<h3 id="orgae542dc">１．</h3>
+<div class="outline-text-3" id="text-orgae542dc">
+<p>
+VisualStudioで作成したプロジェクトにこれらのファイルを登録しビルドすると、ビルドエラーが発生する。<br />
+エラーの種類とそのエラーの原因を述べよ。<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd282eb4" class="outline-3">
+<h3 id="orgd282eb4">２．</h3>
+<div class="outline-text-3" id="text-orgd282eb4">
+<p>
+Character.hを修正し、ビルドエラーを回避せよ。<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd3c835" class="outline-3">
+<h3 id="orgfd3c835">３．</h3>
+<div class="outline-text-3" id="text-orgfd3c835">
+<p>
+上記２．の修正でエラーが回避できる理由を述べよ。<br />
+</p>
+</div>
 </div>
 </div>
 </div>

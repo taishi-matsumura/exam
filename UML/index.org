@@ -1,0 +1,20 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: UML 筆記試験
+* ソースコードを解析してUMLを作成する
+下記にアップロードされているソースコードは、あるゲームのタイトルシーンで使用されるクラス群である。
+これらを解析し以下の問いに答えよ。
+[[https://gist.github.com/taishi-matsumura/7775ad0725537e0df748c69177fc509a][ソースコード]]
+
+** 問1
+これらのクラス群について、クラス図を作成せよ。
+ただし、各クラスのprivateメンバについては記載しなくてよい。
+
+** 問2
+タイトルシーンでのシーケンス図を作成せよ。
+ただし、SceneManagerより上位とLibraryより下位の部分については記載しなくてよい。
+
+** 問3
+C++の言語的観点やオブジェクト指向の観点から、不備・改善点があれば指摘せよ。

@@ -3,10 +3,9 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
-<!-- 2018-06-22 金 22:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1年生 前期 DirectX課題</title>
+<title>C++ 筆記試験(その１)</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -229,130 +228,89 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">1年生 前期 DirectX課題</h1>
+<h1 class="title">C++ 筆記試験(その１)</h1>
 
-<div id="outline-container-org0dd004c" class="outline-2">
-<h2 id="org0dd004c">以下の各STEPについて、それぞれ別の実行ファイルとしてプログラムを作成せよ</h2>
-<div class="outline-text-2" id="text-org0dd004c">
-<ul class="org-ul">
-<li><b>ソリューション名は「Exercise」とし、その配下に各STEPのプロジェクトを作成すること</b><br /></li>
-<li><b>各STEPで必要となるDirectXの関数やWin32APIを列挙しているので、不明な点はMSDN等で調べること</b><br /></li>
-<li><b>Windowsのプログラミングに慣れることが目的なので、前のSTEPの内容を丸々コピペするのは極力避けること</b><br /></li>
-</ul>
-</div>
-<div id="outline-container-org4ddb7d6" class="outline-3">
-<h3 id="org4ddb7d6">STEP1 空のWindowの生成</h3>
-<div class="outline-text-3" id="text-org4ddb7d6">
-<ol class="org-ol">
-<li>空のプロジェクトを作成し、WinMainを作成する。この時点では空関数でよい。<br /></li>
-<li>WM_QUITメッセージが来るまでループするwhile文(for/do whileでも可)を作成する。(以後、これをメインループと呼ぶ)<br /></li>
-<li>メインループが無駄に超高速で回らないよう、Sleep()を用いてループ一回ごとに1msのwaitを挟む。<br /></li>
-<li>自作のウィンドウプロシージャを作成し、空のWindowを生成する。ウィンドウプロシージャの名前は自分で決めること。<br /></li>
-<li>任意のウィンドウタイトルを設定し、期待通りに反映されていることを目視確認すること。<br /></li>
-</ol>
-</div>
-<div id="outline-container-orgeccbcfc" class="outline-4">
-<h4 id="orgeccbcfc">使用する関数：</h4>
-<div class="outline-text-4" id="text-orgeccbcfc">
-<ul class="org-ul">
-<li>RegisterClass()<br /></li>
-<li>CreateWindow()<br /></li>
-<li>PeekMessage()<br /></li>
-<li>TranslateMessage()<br /></li>
-<li>DispatchMessage()<br /></li>
-<li>timeBeginPeriod()<br /></li>
-<li>Sleep()<br /></li>
-<li>timeEndPeriod()<br /></li>
-</ul>
-</div>
+<div id="outline-container-org0ff9199" class="outline-2">
+<h2 id="org0ff9199">問1</h2>
+<div class="outline-text-2" id="text-org0ff9199">
+<p>
+以下のメンバを持つPlayerクラスを作成せよ。<br />
+・レベル、ヒットポイント、攻撃力、防御力(いずれもint型)<br />
+・上記メンバを初期化する関数<br />
+・上記メンバの値を表示する関数<br />
+・デフォルトコンストラクタ、デストラクタ(いずれも空関数で良い)<br />
+</p>
+
+<p>
+メンバ変数はカプセル化し、Playerクラスのメンバ関数以外からは<br />
+読み書きできないようにすること。<br />
+</p>
 </div>
 </div>
 
-<div id="outline-container-org23f721b" class="outline-3">
-<h3 id="org23f721b">STEP2 ポリゴンを一枚描画</h3>
-<div class="outline-text-3" id="text-org23f721b">
-<ol class="org-ol">
-<li>DirectXオブジェクトを生成/初期化する。<br /></li>
-<li>DirectXデバイスを生成する。<br /></li>
-<li>自作の描画関数を作成する。この時点では空関数でよい。<br /></li>
-<li>当該関数がメインループの中から毎秒60回呼ばれるようにする。<br /></li>
-<li>当該関数内で頂点を3つ作成し、ポリゴンを1枚描画する。<br /></li>
-<li>プログラム終了時にDirectXの各オブジェクトを解放する。<br /></li>
-</ol>
-</div>
-<div id="outline-container-orge66fc2f" class="outline-4">
-<h4 id="orge66fc2f">使用する関数：</h4>
-<div class="outline-text-4" id="text-orge66fc2f">
-<ul class="org-ul">
-<li>GetAdapterDisplayMode()<br /></li>
-<li>Direct3DCreate9()<br /></li>
-<li>IDirect3D9::CreateDevice()<br /></li>
-<li>timeGetTime()<br /></li>
-<li>IDirect3DDevice9::SetFVF()<br /></li>
-<li>IDirect3DDevice9::Clear()<br /></li>
-<li>IDirect3DDevice9::BeginScene()<br /></li>
-<li>IDirect3DDevice9::DrawPrimitiveUP()<br /></li>
-<li>IDirect3DDevice9::EndScene()<br /></li>
-<li>IDirect3DDevice9::Present()<br /></li>
-<li>IDirect3DDevice9::Release()<br /></li>
-<li>IDirect3D9::Release()<br /></li>
-</ul>
-</div>
+<div id="outline-container-orgd3dec97" class="outline-2">
+<h2 id="orgd3dec97">問2</h2>
+<div class="outline-text-2" id="text-orgd3dec97">
+<p>
+レベルを指定しなければデフォルト値「１」がメンバ変数に設定され、<br />
+値を指定した場合はその値がメンバ変数に設定されるよう、<br />
+初期化関数の仕様をデフォルト引数を用いて変更せよ。<br />
+</p>
 </div>
 </div>
 
-<div id="outline-container-org04f38ec" class="outline-3">
-<h3 id="org04f38ec">STEP3 矩形の描画</h3>
-<div class="outline-text-3" id="text-org04f38ec">
-<ol class="org-ol">
-<li>頂点を4つにし、ポリゴンを2枚用いて矩形を描画する。<br /></li>
-<li>任意の透過pngファイルをロードし、テクスチャを生成する。<br /></li>
-<li>生成したテクスチャを、前述の矩形領域に貼り付けて描画する。<br /></li>
-</ol>
-</div>
-<div id="outline-container-org5e811f5" class="outline-4">
-<h4 id="org5e811f5">使用する関数：</h4>
-<div class="outline-text-4" id="text-org5e811f5">
-<ul class="org-ul">
-<li>IDirect3DDevice9::SetRenderState()<br /></li>
-<li>IDirect3DDevice9::SetTextureStageState()<br /></li>
-<li>D3DXCreateTextureFromFile()<br /></li>
-<li>SetTexture()<br /></li>
-</ul>
-</div>
+<div id="outline-container-orgd08db6a" class="outline-2">
+<h2 id="orgd08db6a">問3</h2>
+<div class="outline-text-2" id="text-orgd08db6a">
+<p>
+問２で作成した初期化関数をオーバーロードし、４つのメンバ変数を固定値で初期化する引数無しの関数を作成せよ。<br />
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgedbb17f" class="outline-3">
-<h3 id="orgedbb17f">STEP4 キーボードの状態の取得</h3>
-<div class="outline-text-3" id="text-orgedbb17f">
-<ol class="org-ol">
-<li>DirectInputオブジェクトを生成する。<br /></li>
-<li>DirectInputキーボードデバイスを生成する。<br /></li>
-<li>キーボードのデータ形式と強調レベルを設定する。<br /></li>
-<li>自作の操作関数を作成する。この時点では空関数でよい。<br /></li>
-<li>当該関数がメインループの中から毎秒60回呼ばれるようにする。<br /></li>
-<li>当該関数内でキーボードへのアクセス権を獲得し、キーボードの状態を取得する。<br /></li>
-<li>STEP3で作成した矩形を、カーソルキーを操作することで上下左右に移動させる。<br /></li>
-<li>プログラム終了時にキーボードへのアクセス権の解放と各オブジェクトを解放する。<br /></li>
-</ol>
-</div>
-<div id="outline-container-orgbcce0b7" class="outline-4">
-<h4 id="orgbcce0b7">使用する関数：</h4>
-<div class="outline-text-4" id="text-orgbcce0b7">
-<ul class="org-ul">
-<li>DirectInput8Create()<br /></li>
-<li>IDirectInput8::CreateDevice()<br /></li>
-<li>IDirectInputDevice8::SetDataFormat()<br /></li>
-<li>IDirectInputDevice8::SetCooperativeLevel()<br /></li>
-<li>IDirectInputDevice8::Acquire()<br /></li>
-<li>IDirectInputDevice8::GetDeviceState()<br /></li>
-<li>IDirectInputDevice8::Unacquire()<br /></li>
-<li>IDirectInputDevice8::Release()<br /></li>
-<li>IDirectInput8::Release()<br /></li>
-</ul>
+<div id="outline-container-org358f09d" class="outline-2">
+<h2 id="org358f09d">問4</h2>
+<div class="outline-text-2" id="text-org358f09d">
+<p>
+問２・問３で作成した初期化関数を削除し、同等の機能をコンストラクタだけを用いて実現せよ。<br />
+その際、コンストラクタ内でメンバ変数に値を代入するのではなく、<br />
+メンバイニシャライザを用いること。<br />
+</p>
 </div>
 </div>
+
+<div id="outline-container-orgd89cb03" class="outline-2">
+<h2 id="orgd89cb03">問5</h2>
+<div class="outline-text-2" id="text-orgd89cb03">
+<p>
+Playerクラスと同じメンバを持つEnemyクラスを作成し、PlayerクラスとEnemyクラスにそれぞれ固有のメンバを追加するものとする。<br />
+ここで、PlayerクラスとEnemyクラスを汎化したCharacterクラスを作成せよ。<br />
+また、それに伴いPlayerクラスとEnemyクラスを修正せよ。<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa8364c" class="outline-2">
+<h2 id="orgaa8364c">問6</h2>
+<div class="outline-text-2" id="text-orgaa8364c">
+<p>
+PlayerクラスとEnemyクラスのインスタンスを生成する際、メンバの初期値の設定方法について以下の２つの案が考えられる。<br />
+１.インスタンスを生成する主体が初期値を指定する<br />
+２.PlayerクラスとEnemyクラスが初期値を指定する<br />
+</p>
+
+<p>
+それぞれに対応したコンストラクタを作成せよ。<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd57079" class="outline-2">
+<h2 id="orgbd57079">問7</h2>
+<div class="outline-text-2" id="text-orgbd57079">
+<p>
+問６のそれぞれの案の長所・短所を述べよ。<br />
+</p>
 </div>
 </div>
 </div>

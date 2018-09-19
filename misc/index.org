@@ -1,0 +1,112 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: プログラム理論(ごった煮) 筆記試験
+
+** 問1
+10進数の演算式 7÷32 の結果を 2進数で表せ。
+
+** 問2
+16 進小数 2A.4Cを 「2^{n} ＋ 2^{n-1} ＋ ...」の形式で表わせ。
+(基本情報技術者 平成22年春期 午前問1 改)
+
+** 問3
+ゲームの開発に用いる統合ファイル(複数の画像を1枚に纏めたファイル)のサイズは、縦横共に2の累乗のピクセル数にすべきとされている。
+その理由を数式や「2進数」「小数」「tu/tv」等の言葉を用いて説明せよ。
+
+** 問4
+図に示す16ビットの浮動小数点形式において，10進数 0.25 を正規化して表現せよ。
+ここで，正規化は仮数部の最上位けたが1になるように指数部と仮数部を調節する操作とする。
+(応用情報技術者 平成22年春期 午前問2 改)
+[[./01.gif]]
+
+** 問5
+次の浮動小数点表示法がある。小数点は仮数部の左にあり，指数は64の"下駄(げた)履き表現"であって，
+値は (-1)^{s}×0.f×2^{e-64} である。
+二つの16進数45BF0000と41300000を，この浮動小数点表示法で表現された値として加算した結果を求めよ。
+(ソフトウェア開発技術者 平成20年春期 午前問2 改)
+[[./02.gif]]
+
+** 問6
+*** １．
+C言語におけるstatic修飾子を
+・ローカル変数
+・グローバル変数
+・関数
+に付けた場合、それぞれどのような効果が得られるか説明せよ。
+
+*** ２．
+static修飾子を用いれば、オブジェクト指向でいう「カプセル化」はC言語でも実現可能である。
+その理由をC++言語と対比して説明せよ。
+
+** 問7
+以下のようなソースコードがある。
+
+Character.h
+#+BEGIN_SRC c -n
+  class Character
+  {
+  public:
+      Character() {}
+      ~Character() {}
+
+  private:
+      int m_level;
+      int m_hitPoint;
+  };
+#+END_SRC
+
+Player.h
+#+BEGIN_SRC c -n
+  #include "Character.h"
+
+  class Player : public Character
+  {
+  public:
+      Player() {}
+      ~Player() {}
+
+  private:
+      int m_skillLevel;
+  };
+#+END_SRC
+
+Enemy.h
+#+BEGIN_SRC c -n
+  #include "Character.h"
+
+  class Enemy : public Character
+  {
+  public:
+      Enemy() {}
+      ~Enemy() {}
+
+  private:
+      int m_attackRate;
+  };
+#+END_SRC
+
+main.cpp
+#+BEGIN_SRC c -n
+  #include "Player.h"
+  #include "Enemy.h"
+
+  int main()
+  {
+      Player player;
+      Enemy enemy;
+
+      return 0;
+  }
+#+END_SRC
+
+*** １．
+VisualStudioで作成したプロジェクトにこれらのファイルを登録しビルドすると、ビルドエラーが発生する。
+エラーの種類とそのエラーの原因を述べよ。
+
+*** ２．
+Character.hを修正し、ビルドエラーを回避せよ。
+
+*** ３．
+上記２．の修正でエラーが回避できる理由を述べよ。
