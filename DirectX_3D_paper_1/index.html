@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1年生 後期 DirectX試験(第1回)</title>
+<title>DirectX(3D) 筆記試験(その1)</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -228,33 +228,33 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">1年生 後期 DirectX試験(第1回)</h1>
+<h1 class="title">DirectX(3D) 筆記試験(その1)</h1>
 
-<div id="outline-container-orgf14e14b" class="outline-2">
-<h2 id="orgf14e14b">問１</h2>
-<div class="outline-text-2" id="text-orgf14e14b">
+<div id="outline-container-orga779529" class="outline-2">
+<h2 id="orga779529">問１</h2>
+<div class="outline-text-2" id="text-orga779529">
 </div>
-<div id="outline-container-orgf1eb352" class="outline-3">
-<h3 id="orgf1eb352">その１</h3>
-<div class="outline-text-3" id="text-orgf1eb352">
+<div id="outline-container-org88ea1bb" class="outline-3">
+<h3 id="org88ea1bb">その１</h3>
+<div class="outline-text-3" id="text-org88ea1bb">
 <p>
 4×4の単位行列を書け<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org50ff370" class="outline-3">
-<h3 id="org50ff370">その２</h3>
-<div class="outline-text-3" id="text-org50ff370">
+<div id="outline-container-org8931c5e" class="outline-3">
+<h3 id="org8931c5e">その２</h3>
+<div class="outline-text-3" id="text-org8931c5e">
 <p>
 3次元の情報(各ジオメトリの座標)を2次元の情報(スクリーン上の座標)に変換する過程で必要な変換処理3種類を書け<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org0b75ccc" class="outline-3">
-<h3 id="org0b75ccc">その３</h3>
-<div class="outline-text-3" id="text-org0b75ccc">
+<div id="outline-container-orgb6d93be" class="outline-3">
+<h3 id="orgb6d93be">その３</h3>
+<div class="outline-text-3" id="text-orgb6d93be">
 <p>
 以下の機能はどの変換処理を用いて実現するか、それぞれについて答えよ<br />
 </p>
@@ -271,13 +271,13 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org43867f4" class="outline-2">
-<h2 id="org43867f4">問２</h2>
-<div class="outline-text-2" id="text-org43867f4">
+<div id="outline-container-orga21203d" class="outline-2">
+<h2 id="orga21203d">問２</h2>
+<div class="outline-text-2" id="text-orga21203d">
 </div>
-<div id="outline-container-orgd17297e" class="outline-3">
-<h3 id="orgd17297e">その１</h3>
-<div class="outline-text-3" id="text-orgd17297e">
+<div id="outline-container-orgf533fff" class="outline-3">
+<h3 id="orgf533fff">その１</h3>
+<div class="outline-text-3" id="text-orgf533fff">
 <p>
 以下は全て「D3DXMatrix」で始まるヘルパー関数である。それぞれの関数名を答えよ(D3DXMatrixは書かなくて良い)<br />
 </p>
@@ -292,123 +292,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orge8f8d04" class="outline-3">
-<h3 id="orge8f8d04">その２</h3>
-<div class="outline-text-3" id="text-orge8f8d04">
+<div id="outline-container-org6286338" class="outline-3">
+<h3 id="org6286338">その２</h3>
+<div class="outline-text-3" id="text-org6286338">
 <p>
 その１の5.の関数を使用する際に必要なパラメータを3つ書け。<br />
 </p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org20bf253" class="outline-2">
-<h2 id="org20bf253">問３</h2>
-<div class="outline-text-2" id="text-org20bf253">
-<p>
-以下は2Dの回転行列の求め方について書かれている。空白部を埋めよ<br />
-</p>
-
-<div class="HTML">
-<p>
-&lt;pre&gt;<br />
-xy平面上の点(x, y)を原点(0, 0)を中心にθ回転した点(x', y')について考える。<br />
-</p>
-
-<p>
-原点と(x, y)を通る直線とx軸のなす角をα、(x, y)と原点(0, 0)との距離をrとすると、<br />
-</p>
-
-<p>
-x' = &lt;span class="bb"&gt; &lt;/span&gt;  …①<br />
-y' = &lt;span class="bb"&gt; &lt;/span&gt;  …②<br />
-</p>
-
-<p>
-また、加法定理より、<br />
-</p>
-
-<p>
-cos(α + θ) = cosα・cosθ - sinα・sinθ  …③<br />
-sin(α + θ) = sinα・cosθ + cosα・sinθ  …④<br />
-</p>
-
-<p>
-x'について整理すると<br />
-</p>
-
-<p>
-x' = &lt;span class="bb"&gt; &lt;/span&gt;  (∵①・③より)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;  (∵cosα = x/r、sinα = y/r)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;<br />
-</p>
-
-<p>
-同様にy'について整理すると<br />
-</p>
-
-<p>
-y' = &lt;span class="bb"&gt; &lt;/span&gt;  (∵②・④より)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;  (∵sinα = y/r、cosα = x/r)<br />
-   = &lt;span class="bb"&gt; &lt;/span&gt;<br />
-</p>
-
-<p>
-xy平面上の座標(x, y)を原点(0, 0)からのベクトルと考え、それを行列で表現すると<br />
-(x  y)<br />
-となり、この行列に2×2行列を掛けあわせたものは以下のようになる。<br />
-</p>
-
-<p>
-(x  y)・(a  c) = &lt;span class="bb"&gt; &lt;/span&gt;   …⑤<br />
-        (b  d)<br />
-</p>
-
-<p>
-ここで、前述の「点(x, y)を原点を中心にθ回転させた点(x', y')」についても同様に行列で表現すると<br />
-</p>
-
-<p>
-(x'  y') = &lt;span class="bb"&gt; &lt;/span&gt;   …⑥<br />
-</p>
-
-<p>
-⑤・⑥の右辺に注目し、<br />
-a = cosθ<br />
-b = -sinθ<br />
-c = sinθ<br />
-d = cosθ<br />
-と置くと、<br />
-</p>
-
-<p>
-(x  y)・(a  c) = (x  y)・&lt;span class="bb"&gt; &lt;/span&gt;<br />
-        (b  d)<br />
-</p>
-
-<p>
-= &lt;span class="bb"&gt; &lt;/span&gt;<br />
-= (x'  y')<br />
-</p>
-
-<p>
-と変換できる。<br />
-</p>
-
-<p>
-∴点(x, y)を原点を中心にθ回転させた点(x', y')は<br />
-</p>
-
-<p>
-(x  y)・&lt;span class="bb"&gt; &lt;/span&gt;<br />
-</p>
-
-<p>
-にて求められる。<br />
-&lt;/pre&gt;<br />
-</p>
-
 </div>
 </div>
 </div>

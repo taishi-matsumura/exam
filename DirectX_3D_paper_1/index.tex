@@ -1,0 +1,167 @@
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{1年生 後期 DirectX試験(第1回)}
+\hypersetup{
+ pdfauthor={Taishi MATSUMURA},
+ pdftitle={1年生 後期 DirectX試験(第1回)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.14)}, 
+ pdflang={Ja}}
+\begin{document}
+
+\maketitle
+
+\section*{問１}
+\label{sec:org56aeac4}
+\subsection*{その１}
+\label{sec:orgb7bb1db}
+4×4の単位行列を書け\\
+
+\subsection*{その２}
+\label{sec:org0dd9955}
+3次元の情報(各ジオメトリの座標)を2次元の情報(スクリーン上の座標)に変換する過程で必要な変換処理3種類を書け\\
+
+\subsection*{その３}
+\label{sec:orge1ec434}
+以下の機能はどの変換処理を用いて実現するか、それぞれについて答えよ\\
+\begin{enumerate}
+\item ジオメトリの回転\\
+\item ジオメトリの拡大・縮小\\
+\item ジオメトリの平行移動\\
+\item カメラの回転\\
+\item カメラの移動\\
+\item ズームイン・ズームアウト\\
+\end{enumerate}
+
+
+\section*{問２}
+\label{sec:org7cdda78}
+\subsection*{その１}
+\label{sec:org7a0a377}
+以下は全て「D3DXMatrix」で始まるヘルパー関数である。それぞれの関数名を答えよ(D3DXMatrixは書かなくて良い)\\
+\begin{enumerate}
+\item 単位行列作成\\
+\item 行列の積\\
+\item 平行移動行列作成（オフセット）\\
+\item X軸回転行列作成\\
+\item ビュー変換行列作成\\
+\item 射影変換行列作成\\
+\end{enumerate}
+
+\subsection*{その２}
+\label{sec:org816cb46}
+その１の5.の関数を使用する際に必要なパラメータを3つ書け。\\
+
+
+\section*{問３}
+\label{sec:org1c60f83}
+以下は2Dの回転行列の求め方について書かれている。空白部を埋めよ\\
+
+xy平面上の点(x, y)を原点(0, 0)を中心にθ回転した点(x', y')について考える。\\
+
+原点と(x, y)を通る直線とx軸のなす角をα、(x, y)と原点(0, 0)との距離をrとすると、\\
+
+\begin{quote}
+\begin{eqnarray}
+x' = \boxed{\vphantom{0}\hspace{5em}}\\
+y' = \boxed{\vphantom{0}\hspace{5em}}
+\end{eqnarray}
+\end{quote}
+
+また、加法定理より、\\
+
+\begin{quote}
+\begin{eqnarray}
+\cos (\alpha + \theta) = \cos\alpha \cdot \cos\theta - \sin \alpha \cdot \sin \theta\\
+\sin (\alpha + \theta) = \sin\alpha \cdot \cos\theta + \cos \alpha \cdot \sin \theta
+\end{eqnarray}
+\end{quote}
+
+x'について整理すると\\
+
+\begin{quote}
+\begin{verbatim}
+複数行のテキストをそのまま出力
+この環境内で改行すると
+このように反映されます。
+記号も → \verb*| ! " $ % $ & |
+\end{verbatim}
+\end{quote}
+
+\begin{quote}
+\begin{eqnarray}
+x' &=& \boxed{\vphantom{0}\hspace{5em}} \verb| (∵(1)・(3)より) |\\
+   &=& \boxed{\vphantom{0}\hspace{5em}} (\because \cos \α = x/r、\sin α = y/r)\\
+   &=& \boxed{\vphantom{0}\hspace{5em}}
+\end{eqnarray}
+\end{quote}
+
+\begin{quote}
+x' = <span class="bb"> </span>  (∵①・③より)\\
+   = <span class="bb"> </span>  (∵cosα = x/r、sinα = y/r)\\
+   = <span class="bb"> </span>\\
+
+同様にy'について整理すると\\
+
+y' = <span class="bb"> </span>  (∵②・④より)\\
+   = <span class="bb"> </span>  (∵sinα = y/r、cosα = x/r)\\
+   = <span class="bb"> </span>\\
+
+xy平面上の座標(x, y)を原点(0, 0)からのベクトルと考え、それを行列で表現すると\\
+\(\left(x\;y\right)\)\\
+となり、この行列に2×2行列を掛けあわせたものは以下のようになる。\\
+\begin{eqnarray*}
+\begin{pmatrix}
+x & y
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+a & c\\
+b & d
+\end{pmatrix}
+ = 
+\boxed{\phantom{hogehoge}}
+\end{eqnarray*}
+…⑤\\
+
+ここで、前述の「点(x, y)を原点を中心にθ回転させた点(x', y')」についても同様に行列で表現すると\\
+
+(x'  y') = <span class="bb"> </span>   …⑥\\
+
+⑤・⑥の右辺に注目し、\\
+a = cosθ\\
+b = -sinθ\\
+c = sinθ\\
+d = cosθ\\
+と置くと、\\
+
+(x  y)・(a  c) = (x  y)・<span class="bb"> </span>\\
+        (b  d)\\
+
+= <span class="bb"> </span>\\
+= (x'  y')\\
+
+と変換できる。\\
+
+∴点(x, y)を原点を中心にθ回転させた点(x', y')は\\
+
+(x  y)・<span class="bb"> </span>\\
+
+にて求められる。\\
+\end{quote}
+\end{document}
