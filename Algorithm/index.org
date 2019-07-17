@@ -1,0 +1,16 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: アルゴリズム 筆記試験
+
+** 問1
+[[./sort.png]]
+上図のフローチャートはソートのアルゴリズムを示したものである。
+data[ ]に{3, 1, 5, 4, 2}を与えた場合について、以下の問いに答えよ。
+（１）※時点での「i」「j」「data[ ]」のトレース表を作成せよ。
+（２）このソート方法は一般的に何と呼ばれているか答えよ。
+
+** 問2
+（１）バブルソートのアルゴリズムをフローチャートで示せ。
+（２）C言語でバブルソートを実現せよ。

@@ -7,6 +7,7 @@
 * 1年生 前期
 ** [[file:C_practice/index.html][C言語 練習問題]]
 ** [[file:C_paper/index.html][C言語 筆記試験]]
+** [[file:Algorithm/index.html][アルゴリズム 筆記試験]]
 ** [[file:DirectX_2D/index.html][DirectX(2D) 提出課題]]
 
 * 1年生 後期
