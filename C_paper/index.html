@@ -159,6 +159,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -184,7 +197,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -230,36 +243,36 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">C言語 筆記試験</h1>
 
-<div id="outline-container-orgfc50bac" class="outline-2">
-<h2 id="orgfc50bac">問1</h2>
-<div class="outline-text-2" id="text-orgfc50bac">
+<div id="outline-container-org3a99bcd" class="outline-2">
+<h2 id="org3a99bcd">問1</h2>
+<div class="outline-text-2" id="text-org3a99bcd">
 <p>
 グローバル変数とローカル変数の違いについて述べよ<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbf874de" class="outline-2">
-<h2 id="orgbf874de">問2</h2>
-<div class="outline-text-2" id="text-orgbf874de">
+<div id="outline-container-org5993aa1" class="outline-2">
+<h2 id="org5993aa1">問2</h2>
+<div class="outline-text-2" id="text-org5993aa1">
 <p>
 プリプロセッサの#includeと#defineについて説明せよ<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcb7172b" class="outline-2">
-<h2 id="orgcb7172b">問3</h2>
-<div class="outline-text-2" id="text-orgcb7172b">
+<div id="outline-container-org3b0e85f" class="outline-2">
+<h2 id="org3b0e85f">問3</h2>
+<div class="outline-text-2" id="text-org3b0e85f">
 <p>
 int、char、long、short、float、double型についてそれぞれ説明せよ<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org48fa12b" class="outline-2">
-<h2 id="org48fa12b">問4</h2>
-<div class="outline-text-2" id="text-org48fa12b">
+<div id="outline-container-org1aae17f" class="outline-2">
+<h2 id="org1aae17f">問4</h2>
+<div class="outline-text-2" id="text-org1aae17f">
 <p>
 以下のプログラムを作成せよ<br />
 </p>
@@ -271,9 +284,9 @@ int、char、long、short、float、double型についてそれぞれ説明せ�
 </div>
 </div>
 
-<div id="outline-container-org221358a" class="outline-2">
-<h2 id="org221358a">問5</h2>
-<div class="outline-text-2" id="text-org221358a">
+<div id="outline-container-orgc5cb750" class="outline-2">
+<h2 id="orgc5cb750">問5</h2>
+<div class="outline-text-2" id="text-orgc5cb750">
 <p>
 以下のプログラムの、main関数終了時点でのa、b、c、*c、d、*dの値を答えよ<br />
 </p>
@@ -292,9 +305,9 @@ int、char、long、short、float、double型についてそれぞれ説明せ�
 </div>
 </div>
 
-<div id="outline-container-org39e5a08" class="outline-2">
-<h2 id="org39e5a08">問6</h2>
-<div class="outline-text-2" id="text-org39e5a08">
+<div id="outline-container-orgdfeb87f" class="outline-2">
+<h2 id="orgdfeb87f">問6</h2>
+<div class="outline-text-2" id="text-orgdfeb87f">
 <p>
    下記のプログラムについて以下の問いに答えよ<br />
 （１）コンパイルエラーを修正せよ<br />
@@ -341,9 +354,9 @@ int、char、long、short、float、double型についてそれぞれ説明せ�
 </div>
 </div>
 
-<div id="outline-container-orgca98f05" class="outline-2">
-<h2 id="orgca98f05">問7</h2>
-<div class="outline-text-2" id="text-orgca98f05">
+<div id="outline-container-orgdac1017" class="outline-2">
+<h2 id="orgdac1017">問7</h2>
+<div class="outline-text-2" id="text-orgdac1017">
 <p>
    以下のプログラムに下記の変更を加えよ。<br />
 （１）学年により生徒数が決まるので、学年で判断して生徒数を設定する関数を作成する。<br />
@@ -415,6 +428,37 @@ int、char、long、short、float、double型についてそれぞれ説明せ�
 <span class="linenr">61: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">SetStudentCount</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">Subject</span>* <span style="color: #7590db;">pSubject</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
 <span class="linenr">62: </span>    <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">&#12371;&#12371;&#12434;&#20316;&#12387;&#12390;&#12418;&#12425;&#12358;</span>
 <span class="linenr">63: </span><span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2983e7e" class="outline-2">
+<h2 id="org2983e7e">問8</h2>
+<div class="outline-text-2" id="text-org2983e7e">
+<p>
+   以下のプログラムに下記の変更を加えよ。<br />
+（１）構造体をクラスに変更する。<br />
+（２）メンバ変数をencapsulateし、accessor methodを用いてアクセスするよう変更する。<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">Player</span> <span style="color: #4f97d7;">{</span>
+<span class="linenr"> 4: </span>    <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">hp</span>;
+<span class="linenr"> 5: </span>    <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">mp</span>;
+<span class="linenr"> 6: </span><span style="color: #4f97d7;">}</span>;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+<span class="linenr"> 9: </span>    <span style="color: #ce537a; font-weight: bold;">Player</span> <span style="color: #7590db;">player</span>;
+<span class="linenr">10: </span>    player.hp = <span style="color: #a45bad;">100</span>;
+<span class="linenr">11: </span>    player.mp = <span style="color: #a45bad;">25</span>;
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>    printf<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"hp = %d, mp = %d\n"</span>, player.hp, player.mp<span style="color: #bc6ec5;">)</span>;
+<span class="linenr">14: </span>
+<span class="linenr">15: </span>    <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span class="linenr">16: </span><span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 </div>
