@@ -1,0 +1,19 @@
+#+LANGUAGE: ja
+#+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
+
+#+TITLE: C++ 筆記試験(その４)
+
+** 問1
+*** １．
+自作のクラスを作成し、デフォルトのコピーコンストラクタと代入演算子を使用禁止にせよ。
+
+*** ２．
+上記の対応を行なわなかった場合に発生する可能性のある不具合の例を示せ。
+
+
+** 問2
+C++の4つのキャストとそれぞれの使い分けについて、例を示して説明せよ。
+
+** 問3
+explicitキーワードを用いるべき場所を挙げよ。
