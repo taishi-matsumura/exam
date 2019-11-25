@@ -2,85 +2,110 @@
 #+OPTIONS: \n:t author:nil creator:nil timestamp:nil html-postamble:nil toc:nil num:nil ^:{}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style1.css" />
 
-#+TITLE: C++ �M�L����(���̂R)
+#+TITLE: C++ 筆記試験(その３)
 
-** ��1
-�ȉ��̃\�[�X�R�[�h���̇@�`�M�𖄂߂�B
+** 問1
+以下のソースコード内の①～⑯を埋めよ。
 
 #+BEGIN_SRC c -n
   #include <iostream>
+  
+  // using宣言を用い、「std::」と書かなくて済むようにする
+  // ※usingディレクティブは使用しないこと
+  ①
 
-  // using�錾��p���A�ustd::�v�Ə����Ȃ��čςނ悤�ɂ���
-  // ��using�f�B���N�e�B�u�͎g�p���Ȃ�����
-  �@
+  // intやfloatなどの数値を共通して扱うためのテンプレートクラス
+  ②
+  struct MyNum {
+      // 変換コンストラクタ
+      ③
 
-  // �|�C���^�^�̈������Q�󂯂�
-  �A void Swap_Ptr(�B)
-  {
-      �C
+      T value;
+  };
+  
+  enum class SwapType {
+      POINTER,
+      REFERENCE
+  };
+  
+  // intやfloat用のMyNumクラスを共通して扱うためのテンプレートクラス
+  // ポインタ若しくは参照を用いてswap処理を行なうことができる
+  ②
+  class Swapper {
+  public:
+      Swapper(T* first, T* second) :first(first), second(second) {}
+
+      void Swap(SwapType type) {
+          switch (type) {
+          case SwapType::POINTER:
+              Swap_Ptr(④);
+              break;
+          case SwapType::REFERENCE:
+              Swap_Ref(⑤);
+              break;
+          default:
+              break;
+          }
+      }
+
+  private:
+      T* first;
+      T* second;
+
+      // ポインタ型の引数を２つ受け取る「Swap_Ptr」という名前のテンプレート関数
+      ⑥
+
+      // 参照型の引数を２つ受け取る「Swap_Ref」という名前のテンプレート関数
+      ⑦
+  };
+  
+  // 受け取った２つの引数の値を、std::coutを用いて表示する
+  ②
+  void Display(⑧ const char* pName1, const char* pName2) {
+      // 「引数1の名前=引数1の値、引数2の名前=引数2の値<改行>」という形式で表示する処理を一行で書く
+      ⑨
   }
+  
+  int main() {
+      // intのMyNum型の変数aとbを宣言し、それぞれ5と10で初期化する
+      ⑩
 
-  // �Q�ƌ^�̈������Q�󂯂�
-  �A void Swap_Ref(�D)
-  {
-      �E
-  }
+      // aとbを用い、Swapper型のインスタンスintSwapperを生成する
+      ⑪
 
-  // �󂯎�����Q�̈����̒l���Astd::cout��p���ĕ\������
-  �A void Display(�F, const char* pName1, const char* pName2)
-  {
-      // �u����1�̖��O=����1�̒l�A����2�̖��O=����2�̒l<���s>�v�Ƃ����`���ŕ\�����鏈������s�ŏ���
-      �G
-  }
+      // Display()を用い、swap前のaとbの値を表示する
+      ⑫
 
-  int main()
-  {
-      int a = 5;
-      int b = 10;
+      // ポインタを用いてaとbの値を入れ替える
+      ⑬
 
-      // a�Ab�̒l��\������
-      �H
+      // Display()を用い、swap前のaとbの値を表示する
+      ⑫
 
-      // Swap_Ptr()��p����a��b�̒l�����ւ���
-      Swap_Ptr(�I);
+      // floatのMyNum型の変数cとdを宣言し、それぞれ1.23fと4.56fで初期化する
+      ⑬
 
-      // a�Ab�̒l��\������
-      �H
+      // cとdを用い、Swapper型のインスタンスfloatSwapperを生成する
+      ⑭
 
-      // Swap_Ref()��p����a��b�̒l�����ւ���
-      Swap_Ref(�J);
+      // Display()を用い、swap前のcとdの値を表示する
+      ⑮
 
-      // a�Ab�̒l��\������
-      �H
+      // 参照を用いてcとdの値を入れ替える
+      ⑯
 
-
-      float c = 1.23f;
-      float d = 4.56f;
-
-      // c�Ad�̒l��\������
-      �K
-
-      // Swap_Ptr()��p����c��d�̒l�����ւ���
-      Swap_Ptr(�L);
-
-      // c�Ad�̒l��\������
-      �K
-
-      // Swap_Ref()��p����c��d�̒l�����ւ���
-      Swap_Ref(�M);
-
-      // c�Ad�̒l��\������
-      �K
+      // Display()を用い、swap前のcとdの値を表示する
+      ⑮
 
       return 0;
   }
 #+END_SRC
 
-** ��2
-�|�C���^�ƎQ�Ƃ̎g�������ɂ��āA�ӌ����q�ׂ�B
+** 問2
+ポインタと参照の使い分けについて、意見を述べよ。
 
-** ��3
-���L�̃N���X�ɂ��āA�₢�ɓ�����B
+** 問3
+下記のクラスについて、問いに答えよ。
 #+BEGIN_SRC c -n
   class Character
   {
@@ -96,14 +121,14 @@
   {
   public:
       virtual void Attack() {
-          // �U���̏���
+          // 攻撃の処理
       }
   };
 #+END_SRC
 
 
-*** �P�D
-�ȉ��̃R�[�h���G���[�ɂȂ闝�R���q�ׂ�B
+*** １．
+以下のコードがエラーになる理由を述べよ。
 #+BEGIN_SRC c -n
   int main()
   {
@@ -113,8 +138,8 @@
   }
 #+END_SRC
 
-*** �Q�D
-�ȉ��̃R�[�h���G���[�ɂȂ闝�R���q�ׂ�B
+*** ２．
+以下のコードがエラーになる理由を述べよ。
 #+BEGIN_SRC c -n
   int main()
   {
@@ -124,8 +149,8 @@
   }
 #+END_SRC
 
-** ��4
-�ȉ��̃\�[�X�R�[�h�̇@�`�D�𖄂߂�
+** 問4
+以下のソースコードの①～⑤を埋めよ
 #+BEGIN_SRC c -n
   #include <vector>
 
@@ -135,22 +160,22 @@
       Sample();
       virtual ~Sample();
   private:
-      �@ m_pIntArray;
-      �A m_intVector;
+      ① m_pIntArray;
+      ② m_intVector;
   };
 
   Sample::Sample()
   {
-      // �v�f��10��int�^�̔z���new���A�擪�A�h���X��m_pIntArray�ɑ��
-      �B
+      // 要素数10のint型の配列をnewし、先頭アドレスをm_pIntArrayに代入
+      ③
 
-      // for����p���A0�`18�̋�����m_intVector�ɋl�߂�
-      �C
+      // for文を用い、0～18の偶数をm_intVectorに詰める
+      ④
   }
 
   Sample::~Sample()
   {
-      // �K�v�ȏ���������΂����ɋL�q
-      �D
+      // 必要な処理があればここに記述
+      ⑤
   }
 #+END_SRC
