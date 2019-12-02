@@ -159,6 +159,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -184,7 +197,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -230,226 +243,226 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">C++ 筆記試験(その２)</h1>
 
-<div id="outline-container-org84e7084" class="outline-2">
-<h2 id="org84e7084">問1</h2>
-<div class="outline-text-2" id="text-org84e7084">
+<div id="outline-container-org6885ba3" class="outline-2">
+<h2 id="org6885ba3">問1</h2>
+<div class="outline-text-2" id="text-org6885ba3">
 <p>
 以下のソースコードをビルドし実行した際、コンソールに何が表示されるか答えよ。<br />
 </p>
 </div>
 
-<div id="outline-container-org76cf0a8" class="outline-3">
-<h3 id="org76cf0a8">Base.h</h3>
-<div class="outline-text-3" id="text-org76cf0a8">
+<div id="outline-container-org7f1f9a4" class="outline-3">
+<h3 id="org7f1f9a4">Base.h</h3>
+<div class="outline-text-3" id="text-org7f1f9a4">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#if</span><span style="color: #bc6ec5; background-color: #100a14;">n</span><span style="color: #bc6ec5; background-color: #100a14;">def</span><span style="background-color: #100a14;"> BASE_H
-<span class="linenr"> 2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#define</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">BASE_H</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#if</span><span style="color: #bc6ec5;">n</span><span style="color: #bc6ec5;">def</span> BASE_H
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#define</span> <span style="color: #7590db;">BASE_H</span>
 <span class="linenr"> 3: </span>
-<span class="linenr"> 4: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">class</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">Sample1</span><span style="background-color: #100a14;">;
+<span class="linenr"> 4: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Sample1</span>;
 <span class="linenr"> 5: </span>
-<span class="linenr"> 6: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">class</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">Base</span><span style="background-color: #100a14;">
-<span class="linenr"> 7: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr"> 8: </span></span><span style="color: #a45bad; background-color: #100a14;">public</span><span style="background-color: #100a14;">:
-<span class="linenr"> 9: </span>    Base</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">10: </span>    virtual ~Base</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">11: </span>    </span><span style="color: #4f97d7; background-color: #100a14; font-weight: bold;">inline</span><span style="background-color: #100a14;"> </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Func1</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14;">{</span><span style="background-color: #100a14;"> Func2</span><span style="color: #2d9574; background-color: #100a14;">()</span><span style="background-color: #100a14;">; </span><span style="color: #bc6ec5; background-color: #100a14;">}</span><span style="background-color: #100a14;">
+<span class="linenr"> 6: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Base</span>
+<span class="linenr"> 7: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 8: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr"> 9: </span>    Base<span style="color: #bc6ec5;">()</span>;
+<span class="linenr">10: </span>    virtual ~Base<span style="color: #bc6ec5;">()</span>;
+<span class="linenr">11: </span>    <span style="color: #4f97d7; font-weight: bold;">inline</span> <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Func1</span><span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{</span> Func2<span style="color: #2d9574;">()</span>; <span style="color: #bc6ec5;">}</span>
 <span class="linenr">12: </span>
-<span class="linenr">13: </span></span><span style="color: #a45bad; background-color: #100a14;">private</span><span style="background-color: #100a14;">:
-<span class="linenr">14: </span>    virtual </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Func2</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">15: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">Sample1</span><span style="background-color: #100a14;">* </span><span style="color: #7590db; background-color: #100a14;">m_pSample1</span><span style="background-color: #100a14;">;
-<span class="linenr">16: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">;
+<span class="linenr">13: </span><span style="color: #a45bad;">private</span>:
+<span class="linenr">14: </span>    virtual <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Func2</span><span style="color: #bc6ec5;">()</span>;
+<span class="linenr">15: </span>    <span style="color: #ce537a; font-weight: bold;">Sample1</span>* <span style="color: #7590db;">m_pSample1</span>;
+<span class="linenr">16: </span><span style="color: #4f97d7;">}</span>;
 <span class="linenr">17: </span>
-<span class="linenr">18: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#endif</span><span style="background-color: #100a14;"> </span><span style="color: #2aa1ae; background-color: #100a14;">// </span><span style="color: #2aa1ae; background-color: #100a14;">BASE_H</span>
+<span class="linenr">18: </span><span style="color: #bc6ec5;">#endif</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">BASE_H</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-org8cbdb76" class="outline-3">
-<h3 id="org8cbdb76">Base.cpp</h3>
-<div class="outline-text-3" id="text-org8cbdb76">
+<div id="outline-container-orgbc65162" class="outline-3">
+<h3 id="orgbc65162">Base.cpp</h3>
+<div class="outline-text-3" id="text-orgbc65162">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Base.h"</span><span style="background-color: #100a14;">
-<span class="linenr"> 2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Sample1.h"</span><span style="background-color: #100a14;">
-<span class="linenr"> 3: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #4f97d7; background-color: #100a14;">&lt;</span><span style="color: #2d9574; background-color: #100a14;">iostream</span><span style="color: #4f97d7; background-color: #100a14;">&gt;</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Base.h"</span>
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Sample1.h"</span>
+<span class="linenr"> 3: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
 <span class="linenr"> 4: </span>
-<span class="linenr"> 5: </span>Base::Base</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr"> 6: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr"> 7: </span>    std::cout &lt;&lt; </span><span style="color: #2d9574; background-color: #100a14;">"Base::Base()"</span><span style="background-color: #100a14;"> &lt;&lt; std::endl;
-<span class="linenr"> 8: </span>    m_pSample1 = new Sample1</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr"> 9: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">
+<span class="linenr"> 5: </span>Base::Base<span style="color: #4f97d7;">()</span>
+<span class="linenr"> 6: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 7: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Base::Base()"</span> &lt;&lt; std::endl;
+<span class="linenr"> 8: </span>    m_pSample1 = new Sample1<span style="color: #bc6ec5;">()</span>;
+<span class="linenr"> 9: </span><span style="color: #4f97d7;">}</span>
 <span class="linenr">10: </span>
-<span class="linenr">11: </span>Base::~Base</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr">12: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">13: </span>    std::cout &lt;&lt; </span><span style="color: #2d9574; background-color: #100a14;">"Base::~Base()"</span><span style="background-color: #100a14;"> &lt;&lt; std::endl;
-<span class="linenr">14: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">delete</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">m_pSample1</span><span style="background-color: #100a14;">;
-<span class="linenr">15: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">
+<span class="linenr">11: </span>Base::~Base<span style="color: #4f97d7;">()</span>
+<span class="linenr">12: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">13: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Base::~Base()"</span> &lt;&lt; std::endl;
+<span class="linenr">14: </span>    <span style="color: #ce537a; font-weight: bold;">delete</span> <span style="color: #7590db;">m_pSample1</span>;
+<span class="linenr">15: </span><span style="color: #4f97d7;">}</span>
 <span class="linenr">16: </span>
-<span class="linenr">17: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Base</span><span style="background-color: #100a14;">::Func2</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr">18: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">19: </span>    m_pSample1-&gt;Func</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">20: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span>
+<span class="linenr">17: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Base</span>::Func2<span style="color: #4f97d7;">()</span>
+<span class="linenr">18: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">19: </span>    m_pSample1-&gt;Func<span style="color: #bc6ec5;">()</span>;
+<span class="linenr">20: </span><span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-orgac1b08b" class="outline-3">
-<h3 id="orgac1b08b">Derived.h</h3>
-<div class="outline-text-3" id="text-orgac1b08b">
+<div id="outline-container-org3d2e1b7" class="outline-3">
+<h3 id="org3d2e1b7">Derived.h</h3>
+<div class="outline-text-3" id="text-org3d2e1b7">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#if</span><span style="color: #bc6ec5; background-color: #100a14;">n</span><span style="color: #bc6ec5; background-color: #100a14;">def</span><span style="background-color: #100a14;"> DERIVED_H
-<span class="linenr"> 2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#define</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">DERIVED_H</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#if</span><span style="color: #bc6ec5;">n</span><span style="color: #bc6ec5;">def</span> DERIVED_H
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#define</span> <span style="color: #7590db;">DERIVED_H</span>
 <span class="linenr"> 3: </span>
-<span class="linenr"> 4: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Base.h"</span><span style="background-color: #100a14;">
+<span class="linenr"> 4: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Base.h"</span>
 <span class="linenr"> 5: </span>
-<span class="linenr"> 6: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">class</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">Sample2</span><span style="background-color: #100a14;">;
+<span class="linenr"> 6: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Sample2</span>;
 <span class="linenr"> 7: </span>
-<span class="linenr"> 8: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">class</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">Derived</span><span style="background-color: #100a14;"> : public Base
-<span class="linenr"> 9: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">10: </span></span><span style="color: #a45bad; background-color: #100a14;">public</span><span style="background-color: #100a14;">:
-<span class="linenr">11: </span>    Derived</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">12: </span>    virtual ~Derived</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
+<span class="linenr"> 8: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Derived</span> : public Base
+<span class="linenr"> 9: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">10: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr">11: </span>    Derived<span style="color: #bc6ec5;">()</span>;
+<span class="linenr">12: </span>    virtual ~Derived<span style="color: #bc6ec5;">()</span>;
 <span class="linenr">13: </span>
-<span class="linenr">14: </span></span><span style="color: #a45bad; background-color: #100a14;">private</span><span style="background-color: #100a14;">:
-<span class="linenr">15: </span>    virtual </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Func2</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">16: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">Sample2</span><span style="background-color: #100a14;">* </span><span style="color: #7590db; background-color: #100a14;">m_pSample2</span><span style="background-color: #100a14;">;
-<span class="linenr">17: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">;
+<span class="linenr">14: </span><span style="color: #a45bad;">private</span>:
+<span class="linenr">15: </span>    virtual <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Func2</span><span style="color: #bc6ec5;">()</span>;
+<span class="linenr">16: </span>    <span style="color: #ce537a; font-weight: bold;">Sample2</span>* <span style="color: #7590db;">m_pSample2</span>;
+<span class="linenr">17: </span><span style="color: #4f97d7;">}</span>;
 <span class="linenr">18: </span>
-<span class="linenr">19: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#endif</span><span style="background-color: #100a14;"> </span><span style="color: #2aa1ae; background-color: #100a14;">// </span><span style="color: #2aa1ae; background-color: #100a14;">DERIVED_H</span>
+<span class="linenr">19: </span><span style="color: #bc6ec5;">#endif</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">DERIVED_H</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-org32fda85" class="outline-3">
-<h3 id="org32fda85">Derived.cpp</h3>
-<div class="outline-text-3" id="text-org32fda85">
+<div id="outline-container-orge331cd0" class="outline-3">
+<h3 id="orge331cd0">Derived.cpp</h3>
+<div class="outline-text-3" id="text-orge331cd0">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Derived.h"</span><span style="background-color: #100a14;">
-<span class="linenr"> 2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Sample2.h"</span><span style="background-color: #100a14;">
-<span class="linenr"> 3: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #4f97d7; background-color: #100a14;">&lt;</span><span style="color: #2d9574; background-color: #100a14;">iostream</span><span style="color: #4f97d7; background-color: #100a14;">&gt;</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Derived.h"</span>
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Sample2.h"</span>
+<span class="linenr"> 3: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
 <span class="linenr"> 4: </span>
-<span class="linenr"> 5: </span>Derived::Derived</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr"> 6: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr"> 7: </span>    std::cout &lt;&lt; </span><span style="color: #2d9574; background-color: #100a14;">"Derived::Derived()"</span><span style="background-color: #100a14;"> &lt;&lt; std::endl;
-<span class="linenr"> 8: </span>    m_pSample2 = new Sample2</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr"> 9: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">
+<span class="linenr"> 5: </span>Derived::Derived<span style="color: #4f97d7;">()</span>
+<span class="linenr"> 6: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 7: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Derived::Derived()"</span> &lt;&lt; std::endl;
+<span class="linenr"> 8: </span>    m_pSample2 = new Sample2<span style="color: #bc6ec5;">()</span>;
+<span class="linenr"> 9: </span><span style="color: #4f97d7;">}</span>
 <span class="linenr">10: </span>
-<span class="linenr">11: </span>Derived::~Derived</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr">12: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">13: </span>    std::cout &lt;&lt; </span><span style="color: #2d9574; background-color: #100a14;">"Derived::~Derived()"</span><span style="background-color: #100a14;"> &lt;&lt; std::endl;
-<span class="linenr">14: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">delete</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">m_pSample2</span><span style="background-color: #100a14;">;
-<span class="linenr">15: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">
+<span class="linenr">11: </span>Derived::~Derived<span style="color: #4f97d7;">()</span>
+<span class="linenr">12: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">13: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Derived::~Derived()"</span> &lt;&lt; std::endl;
+<span class="linenr">14: </span>    <span style="color: #ce537a; font-weight: bold;">delete</span> <span style="color: #7590db;">m_pSample2</span>;
+<span class="linenr">15: </span><span style="color: #4f97d7;">}</span>
 <span class="linenr">16: </span>
-<span class="linenr">17: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Derived</span><span style="background-color: #100a14;">::Func2</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr">18: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">19: </span>    m_pSample2-&gt;Func</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">20: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span>
+<span class="linenr">17: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Derived</span>::Func2<span style="color: #4f97d7;">()</span>
+<span class="linenr">18: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">19: </span>    m_pSample2-&gt;Func<span style="color: #bc6ec5;">()</span>;
+<span class="linenr">20: </span><span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-org5b8b629" class="outline-3">
-<h3 id="org5b8b629">Sample1.h</h3>
-<div class="outline-text-3" id="text-org5b8b629">
+<div id="outline-container-org98bf3d2" class="outline-3">
+<h3 id="org98bf3d2">Sample1.h</h3>
+<div class="outline-text-3" id="text-org98bf3d2">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#if</span><span style="color: #bc6ec5; background-color: #100a14;">n</span><span style="color: #bc6ec5; background-color: #100a14;">def</span><span style="background-color: #100a14;"> SAMPLE1_H
-<span class="linenr"> 2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#define</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">SAMPLE1_H</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#if</span><span style="color: #bc6ec5;">n</span><span style="color: #bc6ec5;">def</span> SAMPLE1_H
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#define</span> <span style="color: #7590db;">SAMPLE1_H</span>
 <span class="linenr"> 3: </span>
-<span class="linenr"> 4: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">class</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">Sample1</span><span style="background-color: #100a14;">
-<span class="linenr"> 5: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr"> 6: </span></span><span style="color: #a45bad; background-color: #100a14;">public</span><span style="background-color: #100a14;">:
-<span class="linenr"> 7: </span>    Sample1</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14;">{}</span><span style="background-color: #100a14;">
-<span class="linenr"> 8: </span>    ~Sample1</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14;">{}</span><span style="background-color: #100a14;">
-<span class="linenr"> 9: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Func</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">10: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">;
+<span class="linenr"> 4: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Sample1</span>
+<span class="linenr"> 5: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 6: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr"> 7: </span>    Sample1<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 8: </span>    ~Sample1<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 9: </span>    <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Func</span><span style="color: #bc6ec5;">()</span>;
+<span class="linenr">10: </span><span style="color: #4f97d7;">}</span>;
 <span class="linenr">11: </span>
-<span class="linenr">12: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#endif</span><span style="background-color: #100a14;"> </span><span style="color: #2aa1ae; background-color: #100a14;">// </span><span style="color: #2aa1ae; background-color: #100a14;">SAMPLE1_H</span>
+<span class="linenr">12: </span><span style="color: #bc6ec5;">#endif</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">SAMPLE1_H</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-org8b7e63d" class="outline-3">
-<h3 id="org8b7e63d">Sample1.cpp</h3>
-<div class="outline-text-3" id="text-org8b7e63d">
+<div id="outline-container-orgd271c37" class="outline-3">
+<h3 id="orgd271c37">Sample1.cpp</h3>
+<div class="outline-text-3" id="text-orgd271c37">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr">1: </span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Sample1.h"</span><span style="background-color: #100a14;">
-<span class="linenr">2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #4f97d7; background-color: #100a14;">&lt;</span><span style="color: #2d9574; background-color: #100a14;">iostream</span><span style="color: #4f97d7; background-color: #100a14;">&gt;</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr">1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Sample1.h"</span>
+<span class="linenr">2: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
 <span class="linenr">3: </span>
-<span class="linenr">4: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Sample1</span><span style="background-color: #100a14;">::Func</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr">5: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">6: </span>    std::cout &lt;&lt; </span><span style="color: #2d9574; background-color: #100a14;">"Sample1::Func()"</span><span style="background-color: #100a14;"> &lt;&lt; std::endl;
-<span class="linenr">7: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span>
+<span class="linenr">4: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Sample1</span>::Func<span style="color: #4f97d7;">()</span>
+<span class="linenr">5: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">6: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Sample1::Func()"</span> &lt;&lt; std::endl;
+<span class="linenr">7: </span><span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-org8758b72" class="outline-3">
-<h3 id="org8758b72">Sample2.h</h3>
-<div class="outline-text-3" id="text-org8758b72">
+<div id="outline-container-org19c114f" class="outline-3">
+<h3 id="org19c114f">Sample2.h</h3>
+<div class="outline-text-3" id="text-org19c114f">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#if</span><span style="color: #bc6ec5; background-color: #100a14;">n</span><span style="color: #bc6ec5; background-color: #100a14;">def</span><span style="background-color: #100a14;"> SAMPLE2_H
-<span class="linenr"> 2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#define</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">SAMPLE2_H</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#if</span><span style="color: #bc6ec5;">n</span><span style="color: #bc6ec5;">def</span> SAMPLE2_H
+<span class="linenr"> 2: </span><span style="color: #bc6ec5;">#define</span> <span style="color: #7590db;">SAMPLE2_H</span>
 <span class="linenr"> 3: </span>
-<span class="linenr"> 4: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">class</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">Sample2</span><span style="background-color: #100a14;">
-<span class="linenr"> 5: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr"> 6: </span></span><span style="color: #a45bad; background-color: #100a14;">public</span><span style="background-color: #100a14;">:
-<span class="linenr"> 7: </span>    Sample2</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14;">{}</span><span style="background-color: #100a14;">
-<span class="linenr"> 8: </span>    ~Sample2</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14;">{}</span><span style="background-color: #100a14;">
-<span class="linenr"> 9: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Func</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
-<span class="linenr">10: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span><span style="background-color: #100a14;">;
+<span class="linenr"> 4: </span><span style="color: #ce537a; font-weight: bold;">class</span> <span style="color: #7590db;">Sample2</span>
+<span class="linenr"> 5: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 6: </span><span style="color: #a45bad;">public</span>:
+<span class="linenr"> 7: </span>    Sample2<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 8: </span>    ~Sample2<span style="color: #bc6ec5;">()</span> <span style="color: #bc6ec5;">{}</span>
+<span class="linenr"> 9: </span>    <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Func</span><span style="color: #bc6ec5;">()</span>;
+<span class="linenr">10: </span><span style="color: #4f97d7;">}</span>;
 <span class="linenr">11: </span>
-<span class="linenr">12: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#endif</span><span style="background-color: #100a14;"> </span><span style="color: #2aa1ae; background-color: #100a14;">// </span><span style="color: #2aa1ae; background-color: #100a14;">SAMPLE2_H</span>
+<span class="linenr">12: </span><span style="color: #bc6ec5;">#endif</span> <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">SAMPLE2_H</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-org712f84f" class="outline-3">
-<h3 id="org712f84f">Sample2.cpp</h3>
-<div class="outline-text-3" id="text-org712f84f">
+<div id="outline-container-org4db466b" class="outline-3">
+<h3 id="org4db466b">Sample2.cpp</h3>
+<div class="outline-text-3" id="text-org4db466b">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr">1: </span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Sample2.h"</span><span style="background-color: #100a14;">
-<span class="linenr">2: </span></span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #4f97d7; background-color: #100a14;">&lt;</span><span style="color: #2d9574; background-color: #100a14;">iostream</span><span style="color: #4f97d7; background-color: #100a14;">&gt;</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr">1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Sample2.h"</span>
+<span class="linenr">2: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
 <span class="linenr">3: </span>
-<span class="linenr">4: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">void</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">Sample2</span><span style="background-color: #100a14;">::Func</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr">5: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr">6: </span>    std::cout &lt;&lt; </span><span style="color: #2d9574; background-color: #100a14;">"Sample2::Func()"</span><span style="background-color: #100a14;"> &lt;&lt; std::endl;
-<span class="linenr">7: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span>
+<span class="linenr">4: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Sample2</span>::Func<span style="color: #4f97d7;">()</span>
+<span class="linenr">5: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">6: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Sample2::Func()"</span> &lt;&lt; std::endl;
+<span class="linenr">7: </span><span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 <hr />
 </div>
 </div>
 
-<div id="outline-container-orgad1795b" class="outline-3">
-<h3 id="orgad1795b">main.cpp</h3>
-<div class="outline-text-3" id="text-orgad1795b">
+<div id="outline-container-orgbcdd1a4" class="outline-3">
+<h3 id="orgbcdd1a4">main.cpp</h3>
+<div class="outline-text-3" id="text-orgbcdd1a4">
 <div class="org-src-container">
-<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5; background-color: #100a14;">#include</span><span style="background-color: #100a14;"> </span><span style="color: #2d9574; background-color: #100a14;">"Derived.h"</span><span style="background-color: #100a14;">
+<pre class="src src-c"><span class="linenr"> 1: </span><span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"Derived.h"</span>
 <span class="linenr"> 2: </span>
-<span class="linenr"> 3: </span></span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">int</span><span style="background-color: #100a14;"> </span><span style="color: #bc6ec5; background-color: #100a14; font-weight: bold;">main</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">
-<span class="linenr"> 4: </span></span><span style="color: #4f97d7; background-color: #100a14;">{</span><span style="background-color: #100a14;">
-<span class="linenr"> 5: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">Base</span><span style="background-color: #100a14;">* </span><span style="color: #7590db; background-color: #100a14;">pBase</span><span style="background-color: #100a14;"> = new Derived</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
+<span class="linenr"> 3: </span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span class="linenr"> 4: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 5: </span>    <span style="color: #ce537a; font-weight: bold;">Base</span>* <span style="color: #7590db;">pBase</span> = new Derived<span style="color: #bc6ec5;">()</span>;
 <span class="linenr"> 6: </span>
-<span class="linenr"> 7: </span>    pBase-&gt;Func1</span><span style="color: #bc6ec5; background-color: #100a14;">()</span><span style="background-color: #100a14;">;
+<span class="linenr"> 7: </span>    pBase-&gt;Func1<span style="color: #bc6ec5;">()</span>;
 <span class="linenr"> 8: </span>
-<span class="linenr"> 9: </span>    </span><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">delete</span><span style="background-color: #100a14;"> </span><span style="color: #7590db; background-color: #100a14;">pBase</span><span style="background-color: #100a14;">;
+<span class="linenr"> 9: </span>    <span style="color: #ce537a; font-weight: bold;">delete</span> <span style="color: #7590db;">pBase</span>;
 <span class="linenr">10: </span>
-<span class="linenr">11: </span>    </span><span style="color: #4f97d7; background-color: #100a14; font-weight: bold;">while</span><span style="color: #bc6ec5; background-color: #100a14;">(</span><span style="color: #a45bad; background-color: #100a14;">1</span><span style="color: #bc6ec5; background-color: #100a14;">)</span><span style="background-color: #100a14;">;
-<span class="linenr">12: </span>    </span><span style="color: #4f97d7; background-color: #100a14; font-weight: bold;">return</span><span style="background-color: #100a14;"> </span><span style="color: #a45bad; background-color: #100a14;">0</span><span style="background-color: #100a14;">;
-<span class="linenr">13: </span></span><span style="color: #4f97d7; background-color: #100a14;">}</span>
+<span class="linenr">11: </span>    <span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">)</span>;
+<span class="linenr">12: </span>    <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span class="linenr">13: </span><span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 <hr />
@@ -457,46 +470,117 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgf531bd3" class="outline-2">
-<h2 id="orgf531bd3">問2</h2>
-<div class="outline-text-2" id="text-orgf531bd3">
+<div id="outline-container-org90cabb9" class="outline-2">
+<h2 id="org90cabb9">問2</h2>
+<div class="outline-text-2" id="text-org90cabb9">
 <p>
 Baseクラスのデストラクタを仮想関数にしている理由を述べよ。<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8f8a48e" class="outline-2">
-<h2 id="org8f8a48e">問3</h2>
-<div class="outline-text-2" id="text-org8f8a48e">
+<div id="outline-container-org07613b8" class="outline-2">
+<h2 id="org07613b8">問3</h2>
+<div class="outline-text-2" id="text-org07613b8">
 <p>
 main.cpp L.5 を以下のように変更してビルドし実行した際、コンソールに何が表示されるか答えよ。<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-c"><span style="color: #ce537a; background-color: #100a14; font-weight: bold;">Base</span><span style="background-color: #100a14;">* </span><span style="color: #7590db; background-color: #100a14;">pBase</span><span style="background-color: #100a14;"> = new Base</span><span style="color: #4f97d7; background-color: #100a14;">()</span><span style="background-color: #100a14;">;</span>
+<pre class="src src-c"><span style="color: #ce537a; font-weight: bold;">Base</span>* <span style="color: #7590db;">pBase</span> = new Base<span style="color: #4f97d7;">()</span>;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb41fee3" class="outline-2">
-<h2 id="orgb41fee3">問4</h2>
-<div class="outline-text-2" id="text-orgb41fee3">
+<div id="outline-container-org9ae8e2a" class="outline-2">
+<h2 id="org9ae8e2a">問4</h2>
+<div class="outline-text-2" id="text-org9ae8e2a">
 <p>
-Base::m_pSample1が以下のような仕様だったとする。<br />
-・Baseクラスのインスタンス生成時点ではSample1クラスのインスタンスを生成しない<br />
-・Baseクラスの生存期間内にm_pSample1が指すインスタンスが変更される可能性がある<br />
-・Sample1クラスのインスタンスが生成されないままBaseクラスの生存期間が終了する可能性がある<br />
+Base::m_pSample1が以下のような仕様に変更されたとする。<br />
 </p>
+<ul class="org-ul">
+<li>Baseクラスのインスタンス生成時点ではSample1クラスのインスタンスを生成しない<br /></li>
+<li>Baseクラスの生存期間内にm_pSample1が指すインスタンスが変更される可能性がある<br /></li>
+<li>Sample1クラスのインスタンスが生成されないままBaseクラスの生存期間が終了する可能性がある<br /></li>
+</ul>
 
 <p>
 このとき、<br />
-・コンストラクタ<br />
-・デストラクタ<br />
-・m_pSample1へのアクセス時<br />
-・Sample1クラスのインスタンス破棄時<br />
+</p>
+<ul class="org-ul">
+<li>コンストラクタ<br /></li>
+<li>デストラクタ<br /></li>
+<li>m_pSample1へのアクセス時<br /></li>
+<li>Sample1クラスのインスタンス破棄時<br /></li>
+</ul>
+
+<p>
 のそれぞれについて、どのような点に注意してコーディングすべきか、その理由と併せて答えよ。<br />
 </p>
+</div>
+
+<div id="outline-container-org3b3f60a" class="outline-3">
+<h3 id="org3b3f60a">hint</h3>
+<div class="outline-text-3" id="text-org3b3f60a">
+<p>
+Baseクラスを<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span>Base::Base<span style="color: #4f97d7;">()</span>
+<span class="linenr"> 2: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 3: </span>    std::cout &lt;&lt; <span style="color: #2d9574;">"Base::Base()"</span> &lt;&lt; std::endl;
+<span class="linenr"> 4: </span><span style="color: #4f97d7;">}</span>
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Base</span>::CreateSample<span style="color: #4f97d7;">()</span>
+<span class="linenr"> 7: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr"> 8: </span>    m_pSample1 = new Sample1<span style="color: #bc6ec5;">()</span>;
+<span class="linenr"> 9: </span><span style="color: #4f97d7;">}</span>
+<span class="linenr">10: </span>
+<span class="linenr">11: </span><span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">Base</span>::DeleteSample<span style="color: #4f97d7;">()</span>
+<span class="linenr">12: </span><span style="color: #4f97d7;">{</span>
+<span class="linenr">13: </span>    <span style="color: #ce537a; font-weight: bold;">delete</span> <span style="color: #7590db;">m_pSample1</span>;
+<span class="linenr">14: </span><span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+<p>
+のように変更したり関数を追加したりすると、<br />
+</p>
+<ul class="org-ul">
+<li>コンストラクタでSample1クラスのインスタンスを生成しない<br /></li>
+<li>Baseクラスの生存期間内にm_pSample1が指すインスタンスが変更される可能性がある<br /></li>
+<li>Sample1クラスのインスタンスが生成されないままBaseクラスの生存期間が終了する可能性がある<br /></li>
+</ul>
+
+<p>
+という仕様変更に対応したことになります。<br />
+</p>
+
+<p>
+しかし、このままでは<br />
+</p>
+<ul class="org-ul">
+<li>CreateSample()が連続して呼ばれた場合<br /></li>
+<li>DeleteSample()が連続して呼ばれた場合<br /></li>
+<li>CreateSample()が呼ばれないままBaseクラスが破棄されデストラクタが走った場合<br /></li>
+</ul>
+
+<p>
+のいずれも何かしら問題が発生します。<br />
+</p>
+
+<p>
+ここで、<br />
+</p>
+<ul class="org-ul">
+<li>どのような問題が発生するのか<br /></li>
+<li>それらの問題を回避するためにはどのような修正が必要か<br /></li>
+<li>その修正を行なうことで、なぜその問題が回避できるのか<br /></li>
+</ul>
+
+<p>
+について説明すれば問4に回答したことになりますね。<br />
+</p>
+</div>
 </div>
 </div>
 </div>
