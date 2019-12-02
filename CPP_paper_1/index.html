@@ -243,9 +243,9 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">C++ 筆記試験(その１)</h1>
 
-<div id="outline-container-orgbabbb7f" class="outline-2">
-<h2 id="orgbabbb7f">問1</h2>
-<div class="outline-text-2" id="text-orgbabbb7f">
+<div id="outline-container-org77b61c5" class="outline-2">
+<h2 id="org77b61c5">問1</h2>
+<div class="outline-text-2" id="text-org77b61c5">
 <p>
 以下のメンバを持つPlayerクラスを作成せよ。<br />
 ・レベル、ヒットポイント、攻撃力、防御力(いずれもint型)<br />
@@ -260,27 +260,27 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgb9d0222" class="outline-2">
-<h2 id="orgb9d0222">問2</h2>
-<div class="outline-text-2" id="text-orgb9d0222">
+<div id="outline-container-orga3e4124" class="outline-2">
+<h2 id="orga3e4124">問2</h2>
+<div class="outline-text-2" id="text-orga3e4124">
 <p>
 ４つのメンバ変数を固定値で初期化する、引数無しの初期化関数を作成せよ。<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org69e7b46" class="outline-2">
-<h2 id="org69e7b46">問3</h2>
-<div class="outline-text-2" id="text-org69e7b46">
+<div id="outline-container-orgf92a362" class="outline-2">
+<h2 id="orgf92a362">問3</h2>
+<div class="outline-text-2" id="text-orgf92a362">
 <p>
 問2で作成した初期化関数をオーバーロードし、４つのメンバ変数を任意の値で初期化できる関数を追加せよ。<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc3ba735" class="outline-2">
-<h2 id="orgc3ba735">問4</h2>
-<div class="outline-text-2" id="text-orgc3ba735">
+<div id="outline-container-org58f1291" class="outline-2">
+<h2 id="org58f1291">問4</h2>
+<div class="outline-text-2" id="text-org58f1291">
 <p>
 レベルを指定しなければデフォルト値「１」がメンバ変数に設定され、<br />
 値を指定した場合はその値がメンバ変数に設定されるよう、<br />
@@ -289,9 +289,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org7bb697b" class="outline-2">
-<h2 id="org7bb697b">問5</h2>
-<div class="outline-text-2" id="text-org7bb697b">
+<div id="outline-container-org43f902c" class="outline-2">
+<h2 id="org43f902c">問5</h2>
+<div class="outline-text-2" id="text-org43f902c">
 <p>
 初期化関数を削除し、同等の機能をコンストラクタだけを用いて実現せよ。<br />
 その際、コンストラクタ内でメンバ変数に値を代入するのではなく、<br />
@@ -300,20 +300,24 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org0656cc9" class="outline-2">
-<h2 id="org0656cc9">問6</h2>
-<div class="outline-text-2" id="text-org0656cc9">
+<div id="outline-container-orgdd644dc" class="outline-2">
+<h2 id="orgdd644dc">問6</h2>
+<div class="outline-text-2" id="text-orgdd644dc">
 <p>
 Playerクラスと同じメンバを持つEnemyクラスを作成し、PlayerクラスとEnemyクラスにそれぞれ固有のメンバを追加するものとする。<br />
 ここで、PlayerクラスとEnemyクラスを汎化したCharacterクラスを作成せよ。<br />
-また、それに伴いPlayerクラスとEnemyクラスを修正せよ。<br />
+また、それに伴いPlayerクラスとEnemyクラスを以下の条件に従い修正せよ。<br />
 </p>
+<ul class="org-ul">
+<li>カプセル化を維持するために、Characterクラスのメンバ変数のアクセス修飾子は問1で設定したレベルのままにすること。<br /></li>
+<li>メンバの値を表示する関数をオーバーライドし、Player及びEnemyクラス固有のメンバの値も表示できるようにすること。<br /></li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-orga68d821" class="outline-2">
-<h2 id="orga68d821">問7</h2>
-<div class="outline-text-2" id="text-orga68d821">
+<div id="outline-container-org0862dd4" class="outline-2">
+<h2 id="org0862dd4">問7</h2>
+<div class="outline-text-2" id="text-org0862dd4">
 <p>
 PlayerクラスとEnemyクラスのインスタンスを生成する際、メンバの初期値の設定方法について以下の２つの案が考えられる。<br />
 １.インスタンスを生成する主体が初期値を指定する<br />
@@ -326,9 +330,9 @@ PlayerクラスとEnemyクラスのインスタンスを生成する際、メン
 </div>
 </div>
 
-<div id="outline-container-orgbf314e7" class="outline-2">
-<h2 id="orgbf314e7">問8</h2>
-<div class="outline-text-2" id="text-orgbf314e7">
+<div id="outline-container-org8502b45" class="outline-2">
+<h2 id="org8502b45">問8</h2>
+<div class="outline-text-2" id="text-org8502b45">
 <p>
 問7のそれぞれの案の長所・短所を述べよ。<br />
 </p>
