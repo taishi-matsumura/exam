@@ -5,7 +5,7 @@
 #+TITLE: C++ 筆記試験(その３)
 
 ** 問1
-以下のソースコード内の①～⑯を埋めよ。
+以下のソースコード内の①～⑰を埋めよ。
 
 #+BEGIN_SRC c -n
   #include <iostream>
@@ -83,19 +83,19 @@
       ⑫
 
       // floatのMyNum型の変数cとdを宣言し、それぞれ1.23fと4.56fで初期化する
-      ⑬
-
-      // cとdを用い、Swapper型のインスタンスfloatSwapperを生成する
       ⑭
 
-      // Display()を用い、swap前のcとdの値を表示する
+      // cとdを用い、Swapper型のインスタンスfloatSwapperを生成する
       ⑮
 
-      // 参照を用いてcとdの値を入れ替える
+      // Display()を用い、swap前のcとdの値を表示する
       ⑯
 
+      // 参照を用いてcとdの値を入れ替える
+      ⑰
+
       // Display()を用い、swap前のcとdの値を表示する
-      ⑮
+      ⑯
 
       return 0;
   }
